@@ -1,0 +1,691 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html
+xmlns="http://www.w3.org/1999/xhtml" lang="en-US"><head
+profile="http://gmpg.org/xfn/11"><link
+rel="stylesheet" type="text/css" href="http://leetcode.com/wp-content/cache/minify/000000/fY7BDgIhDER_aBE9-EEFKpAssGm7Ufx6uyzxpodmmubNdK6Wpa-43C2EkqtxQBfV5WbdHkLfCJmt24xvhNbr_sUU8TtLK_mNwRB6rKJYKao80DP5eZir6NXGYFiADIHkGgdzrkcWQW_VcK8CL5NyTKuOIA1Mf05itvuNS8KCbGOWtLspfw2PNgq3ym0F_gA.css" media="all" /><link
+rel="stylesheet" type="text/css" href="http://leetcode.com/wp-content/cache/minify/000000/M9Qvzy9KKShKLS7WLcgvKM1JLALSxSXF-sUllTmp-uUFBQA.css" media="all" /><script type="text/javascript" src="http://leetcode.com/wp-content/cache/minify/000000/LYtRCgMhDEQvZBpKe58SNaiLG9skS-vt68J-DAzz3jxw-xysM9yxZDAnBSVvUnCztZgukJTmELApTj-ordS-4qynsze5hNuq4fuGNMRZHL3yzobxyHnGYYavJglLH5F6eCLl5UMkPX9_.js"></script><meta
+http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta
+name="viewport" content="width=device-width, initial-scale=1.0" /><title>LeetCode</title><link
+rel="pingback" href="http://leetcode.com/xmlrpc.php" /><link
+rel="shortcut icon" href="http://leetcode.com/wp-content/themes/buddyboss-child/_inc/images/favicon.ico" type="image/x-icon"><link
+rel="alternate" type="application/rss+xml" title="LeetCode &raquo; Feed" href="http://leetcode.com/feed" /><link
+rel="alternate" type="application/rss+xml" title="LeetCode &raquo; Comments Feed" href="http://leetcode.com/comments/feed" /><link
+rel='stylesheet' id='gdsr_style_main-css'  href='http://leetcode.com/wp-content/plugins/gd-star-rating/css/gdsr.css.php?t=1366376824&#038;s=a05i05m20k20c05r05%23121620243046%23121620243240%23s1pchristmas%23s1pcrystal%23s1pdarkness%23s1poxygen%23s1goxygen_gif%23s1pplain%23s1ppumpkin%23s1psoft%23s1pstarrating%23s1pstarscape%23t1pclassical%23t1pstarrating%23t1gstarrating_gif%23lsgflower%23lsgradar&#038;o=off&#038;ver=1.9.22' type='text/css' media='all' /><script type='text/javascript'>
+/* <![CDATA[ */
+var CrayonSyntaxSettings = {"version":"2.2.0","is_admin":"0","ajaxurl":"http:\/\/leetcode.com\/wp-admin\/admin-ajax.php","prefix":"crayon-","setting":"crayon-setting","selected":"crayon-setting-selected","changed":"crayon-setting-changed","special":"crayon-setting-special","orig_value":"data-orig-value","debug":""};
+var CrayonSyntaxStrings = {"copy":"Press %s to Copy, %s to Paste","minimize":"Click To Expand Code"};
+/* ]]> */
+</script><script type='text/javascript'>
+/* <![CDATA[ */
+var BP_DTheme = {"my_favs":"My Likes","accepted":"Accepted","rejected":"Rejected","show_all_comments":"Show all comments for this thread","show_all":"Show all","comments":"comments","close":"Close","view":"View","mark_as_fav":"Like","remove_fav":"Unlike","add_photo":"Add Photo","cancel":"Cancel","failed":"Failed","person":"person","people":"people","like":"like","likes":"likes","this_1":"this"};
+/* ]]> */
+</script><script type="text/javascript">var ajaxurl = 'http://leetcode.com/wp-admin/admin-ajax.php';</script><style type='text/css'>#sidebar span.collapsing.archives {
+        border:0;
+        padding:0; 
+        margin:0; 
+        cursor:pointer;
+} 
+
+#sidebar span.monthCount, span.yearCount {text-decoration:none; color:#333}
+#sidebar li.collapsing.archives a.self {font-weight:bold}
+#sidebar ul.collapsing.archives.list ul.collapsing.archives.list:before {content:\'\';} 
+#sidebar ul.collapsing.archives.list li.collapsing.archives:before {content:\'\';} 
+#sidebar ul.collapsing.archives.list li.collapsing.archives {list-style-type:none}
+#sidebar ul.collapsing.archives.list li {
+       margin:0 0 0 .8em;
+       text-indent:-1em}
+#sidebar ul.collapsing.archives.list li.collapsing.archives.item:before {content: \'\\00BB \\00A0\' !important;} 
+#sidebar ul.collapsing.archives.list li.collapsing.archives .sym {
+   font-size:1.2em;
+   font-family:Monaco, \'Andale Mono\', \'FreeMono\', \'Courier new\', \'Courier\', monospace;
+   cursor:pointer;
+    padding-right:15px;}
+#sidebar ul.collapsing.archives.list span.collapsing.archives.collapse .sym {
+    background-image: url(/wp-content/plugins/collapsing-archives/img/list-collapse.gif);
+}
+#sidebar ul.collapsing.archives.list span.collapsing.archives.expand .sym {
+    background-image: url(/wp-content/plugins/collapsing-archives/img/list-expand.gif);
+}</style><script type="text/javascript">
+//<![CDATA[
+var gdsr_cnst_nonce = "437db09749";
+var gdsr_cnst_ajax = "http://leetcode.com/wp-content/plugins/gd-star-rating/ajax.php";
+var gdsr_cnst_button = 1;
+var gdsr_cnst_cache = 0;
+// ]]>
+</script><!--[if IE]><style type="text/css">.ratemulti .starsbar .gdcurrent { -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)"; filter: alpha(opacity=70); }</style><![endif]--><style type="text/css" media="print">#wpadminbar { display:none; }</style><style type="text/css" media="screen">
+	html { margin-top: 28px !important; }
+	* html body { margin-top: 28px !important; }
+</style><script type="text/javascript"> jQuery(document).ready( function() { jQuery("a.confirm").click( function() { if ( confirm( 'Are you sure?' ) ) return true; else return false; }); });</script></head><body
+class="home-page home blog admin-bar no-customize-support no-js buddyboss-active-pics buddyboss-active-wall admin-bar" id="bp-default"> <!--[if lte IE 6]><script src="http://leetcode.com/wp-content/themes/buddyboss/_inc/js/ie6/warning.js"></script><script>window.onload=function(){e("http://leetcode.com/wp-content/themes/buddyboss-child/_inc/js/ie6/")}</script><![endif]--><script type="text/javascript">//<![CDATA[
+(function(){var c=document.body.className;c=c.replace(/no-js/,'js');document.body.className=c;})();
+//]]></script><div
+id="top-hdr-bg"></div><div
+class="menu-bg"></div><div
+id="wrapper"><div
+id="header"><div
+class="padder"><div
+id="logo"> <a
+href="http://leetcode.com" title="Home"><img
+src="http://leetcode.com/wp-content/uploads/2012/12/leetcodelogo.png"/></a></div><div
+class="menu-bg"></div><ul
+class="sf-menu"><li
+class="page_item page-item-2"><a
+href="http://leetcode.com/about">About</a></li><li
+class="page_item page-item-908"><a
+href="http://leetcode.com/activity">Activity</a></li><li
+class="page_item page-item-1466"><a
+href="http://leetcode.com/discuss">Discuss</a></li><li
+class="page_item page-item-1658"><a
+href="http://leetcode.com/donate">Donate</a></li><li
+class="page_item page-item-907"><a
+href="http://leetcode.com/members">Members</a></li><li
+class="page_item page-item-370"><a
+href="http://leetcode.com/onlinejudge">Online Judge</a></li></ul></div></div><div
+id="container"><div
+id="content" class="two_column" style="margin-left: 3%; margin-right: 3%; width: 92%"><div
+class="padder"><div
+class="page" id="blog-latest"><div
+class="post" id="post-1354"><h1 class="posttitle"><a
+href="http://leetcode.com/2012/05/clone-graph-part-i.html" rel="bookmark" title="Permanent Link to Clone Graph Part I">Clone Graph Part I</a></h1><p
+class="date">May 30, 2012 at 10:42 am in <a
+href="http://leetcode.com/category/uncategorized" title="View all posts in Uncategorized" rel="category tag">Uncategorized</a> by <a
+href="http://leetcode.com/members/admin/" title="1337c0d3r">1337c0d3r</a> <span
+class="comments">&middot; <a
+href="http://leetcode.com/2012/05/clone-graph-part-i.html#comments" title="Comment on Clone Graph Part I">40 Comments &#187;</a></span></p><div
+class="entry"> <a
+href="http://leetcode.com/2012/05/clone-graph-part-i.html"></a><p>Clone a graph. Input is a Node pointer. Return the Node pointer of the cloned graph.</p></div></div><div
+class="post" id="post-1224"><h1 class="posttitle"><a
+href="http://leetcode.com/2012/01/palindrome-number.html" rel="bookmark" title="Permanent Link to Palindrome Number">Palindrome Number</a></h1><p
+class="date">Jan 4, 2012 at 11:18 pm in <a
+href="http://leetcode.com/category/uncategorized" title="View all posts in Uncategorized" rel="category tag">Uncategorized</a> by <a
+href="http://leetcode.com/members/admin/" title="1337c0d3r">1337c0d3r</a> <span
+class="comments">&middot; <a
+href="http://leetcode.com/2012/01/palindrome-number.html#comments" title="Comment on Palindrome Number">115 Comments &#187;</a></span></p><div
+class="entry"> <a
+href="http://leetcode.com/2012/01/palindrome-number.html"></a><p>Determine whether an integer is a palindrome. Do this without extra space.</p></div></div><div
+class="post" id="post-993"><h1 class="posttitle"><a
+href="http://leetcode.com/2011/11/longest-palindromic-substring-part-ii.html" rel="bookmark" title="Permanent Link to Longest Palindromic Substring Part II">Longest Palindromic Substring Part II</a></h1><p
+class="date">Nov 20, 2011 at 11:07 pm in <a
+href="http://leetcode.com/category/string" title="View all posts in string" rel="category tag">string</a> by <a
+href="http://leetcode.com/members/admin/" title="1337c0d3r">1337c0d3r</a> <span
+class="comments">&middot; <a
+href="http://leetcode.com/2011/11/longest-palindromic-substring-part-ii.html#comments" title="Comment on Longest Palindromic Substring Part II">82 Comments &#187;</a></span></p><div
+class="entry"> <a
+href="http://leetcode.com/2011/11/longest-palindromic-substring-part-ii.html"></a><p>Given a string S, find the longest palindromic substring in S.</p><p>Note:<br
+/> This is Part II of the article: <a
+href="http://www.leetcode.com/2011/11/longest-palindromic-substring-part-i.html">Longest Palindromic Substring</a>. Here, we describe an algorithm (Manacher&#8217;s algorithm) which finds the longest palindromic substring in linear time. Please read <a
+href="http://www.leetcode.com/2011/11/longest-palindromic-substring-part-i.html">Part I</a> for more background information.</p></div></div><div
+class="post" id="post-951"><h1 class="posttitle"><a
+href="http://leetcode.com/2011/11/longest-palindromic-substring-part-i.html" rel="bookmark" title="Permanent Link to Longest Palindromic Substring Part I">Longest Palindromic Substring Part I</a></h1><p
+class="date"> at 7:04 am in <a
+href="http://leetcode.com/category/dynamic-programming" title="View all posts in dynamic programming" rel="category tag">dynamic programming</a>, <a
+href="http://leetcode.com/category/string" title="View all posts in string" rel="category tag">string</a> by <a
+href="http://leetcode.com/members/admin/" title="1337c0d3r">1337c0d3r</a> <span
+class="comments">&middot; <a
+href="http://leetcode.com/2011/11/longest-palindromic-substring-part-i.html#comments" title="Comment on Longest Palindromic Substring Part I">62 Comments &#187;</a></span></p><div
+class="entry"> <a
+href="http://leetcode.com/2011/11/longest-palindromic-substring-part-i.html"></a><p>Given a string S, find the longest palindromic substring in S.</p></div></div><div
+class="post" id="post-877"><h1 class="posttitle"><a
+href="http://leetcode.com/2011/09/regular-expression-matching.html" rel="bookmark" title="Permanent Link to Regular Expression Matching">Regular Expression Matching</a></h1><p
+class="date">Sep 1, 2011 at 2:47 am in <a
+href="http://leetcode.com/category/backtracking" title="View all posts in backtracking" rel="category tag">backtracking</a>, <a
+href="http://leetcode.com/category/string" title="View all posts in string" rel="category tag">string</a> by <a
+href="http://leetcode.com/members/admin/" title="1337c0d3r">1337c0d3r</a> <span
+class="comments">&middot; <a
+href="http://leetcode.com/2011/09/regular-expression-matching.html#comments" title="Comment on Regular Expression Matching">86 Comments &#187;</a></span></p><div
+class="entry"> <a
+href="http://leetcode.com/2011/09/regular-expression-matching.html"></a><p>Implement regular expression matching with support for &#8216;.&#8217; and &#8216;*&#8217;.</p></div></div><div
+class="post" id="post-846"><h1 class="posttitle"><a
+href="http://leetcode.com/2011/08/insert-into-a-cyclic-sorted-list.html" rel="bookmark" title="Permanent Link to Insert into a Cyclic Sorted List">Insert into a Cyclic Sorted List</a></h1><p
+class="date">Aug 12, 2011 at 9:28 pm in <a
+href="http://leetcode.com/category/linked-list" title="View all posts in linked list" rel="category tag">linked list</a> by <a
+href="http://leetcode.com/members/admin/" title="1337c0d3r">1337c0d3r</a> <span
+class="comments">&middot; <a
+href="http://leetcode.com/2011/08/insert-into-a-cyclic-sorted-list.html#comments" title="Comment on Insert into a Cyclic Sorted List">53 Comments &#187;</a></span></p><div
+class="entry"> <a
+href="http://leetcode.com/2011/08/insert-into-a-cyclic-sorted-list.html"></a><p>Given a node from a cyclic linked list which has been sorted, write a function to insert a value into the list such that it remains a cyclic sorted list. The given node can be any single node in the list.</p></div></div><div
+class="post" id="post-813"><h1 class="posttitle"><a
+href="http://leetcode.com/2011/08/reverse-bits.html" rel="bookmark" title="Permanent Link to Reverse Bits">Reverse Bits</a></h1><p
+class="date">Aug 6, 2011 at 3:16 pm in <a
+href="http://leetcode.com/category/bit-operations" title="View all posts in bit operations" rel="category tag">bit operations</a> by <a
+href="http://leetcode.com/members/admin/" title="1337c0d3r">1337c0d3r</a> <span
+class="comments">&middot; <a
+href="http://leetcode.com/2011/08/reverse-bits.html#comments" title="Comment on Reverse Bits">40 Comments &#187;</a></span></p><div
+class="entry"> <a
+href="http://leetcode.com/2011/08/reverse-bits.html"></a><p>Reverse bits of an unsigned integer.</p></div></div><div
+class="post" id="post-797"><h1 class="posttitle"><a
+href="http://leetcode.com/2011/07/lowest-common-ancestor-of-a-binary-tree-part-ii.html" rel="bookmark" title="Permanent Link to Lowest Common Ancestor of a Binary Tree Part II">Lowest Common Ancestor of a Binary Tree Part II</a></h1><p
+class="date">Jul 21, 2011 at 7:28 am in <a
+href="http://leetcode.com/category/binary-tree" title="View all posts in binary tree" rel="category tag">binary tree</a> by <a
+href="http://leetcode.com/members/admin/" title="1337c0d3r">1337c0d3r</a> <span
+class="comments">&middot; <a
+href="http://leetcode.com/2011/07/lowest-common-ancestor-of-a-binary-tree-part-ii.html#comments" title="Comment on Lowest Common Ancestor of a Binary Tree Part II">24 Comments &#187;</a></span></p><div
+class="entry"> <a
+href="http://leetcode.com/2011/07/lowest-common-ancestor-of-a-binary-tree-part-ii.html"></a><p>Given a binary tree, find the lowest common ancestor of two given nodes in the tree. Each node contains a parent pointer which links to its parent.</p></div></div><div
+class="post" id="post-790"><h1 class="posttitle"><a
+href="http://leetcode.com/2011/07/lowest-common-ancestor-of-a-binary-tree-part-i.html" rel="bookmark" title="Permanent Link to Lowest Common Ancestor of a Binary Tree Part I">Lowest Common Ancestor of a Binary Tree Part I</a></h1><p
+class="date">Jul 18, 2011 at 6:12 pm in <a
+href="http://leetcode.com/category/binary-tree" title="View all posts in binary tree" rel="category tag">binary tree</a> by <a
+href="http://leetcode.com/members/admin/" title="1337c0d3r">1337c0d3r</a> <span
+class="comments">&middot; <a
+href="http://leetcode.com/2011/07/lowest-common-ancestor-of-a-binary-tree-part-i.html#comments" title="Comment on Lowest Common Ancestor of a Binary Tree Part I">41 Comments &#187;</a></span></p><div
+class="entry"> <a
+href="http://leetcode.com/2011/07/lowest-common-ancestor-of-a-binary-tree-part-i.html"></a><p>Given a binary tree, find the lowest common ancestor of two given nodes in the tree.</p></div></div><div
+class="post" id="post-782"><h1 class="posttitle"><a
+href="http://leetcode.com/2011/07/lowest-common-ancestor-of-a-binary-search-tree.html" rel="bookmark" title="Permanent Link to Lowest Common Ancestor of a Binary Search Tree (BST)">Lowest Common Ancestor of a Binary Search Tree (BST)</a></h1><p
+class="date">Jul 17, 2011 at 3:24 am in <a
+href="http://leetcode.com/category/binary-tree" title="View all posts in binary tree" rel="category tag">binary tree</a> by <a
+href="http://leetcode.com/members/admin/" title="1337c0d3r">1337c0d3r</a> <span
+class="comments">&middot; <a
+href="http://leetcode.com/2011/07/lowest-common-ancestor-of-a-binary-search-tree.html#comments" title="Comment on Lowest Common Ancestor of a Binary Search Tree (BST)">21 Comments &#187;</a></span></p><div
+class="entry"> <a
+href="http://leetcode.com/2011/07/lowest-common-ancestor-of-a-binary-search-tree.html"></a><p>Given a binary search tree (BST), find the lowest common ancestor of two given nodes in the BST.</p></div></div><div
+class="post" id="post-765"><h1 class="posttitle"><a
+href="http://leetcode.com/2011/05/a-distance-maximizing-problem.html" rel="bookmark" title="Permanent Link to A Distance Maximizing Problem">A Distance Maximizing Problem</a></h1><p
+class="date">May 19, 2011 at 2:10 am in <a
+href="http://leetcode.com/category/uncategorized" title="View all posts in Uncategorized" rel="category tag">Uncategorized</a> by <a
+href="http://leetcode.com/members/admin/" title="1337c0d3r">1337c0d3r</a> <span
+class="comments">&middot; <a
+href="http://leetcode.com/2011/05/a-distance-maximizing-problem.html#comments" title="Comment on A Distance Maximizing Problem">88 Comments &#187;</a></span></p><div
+class="entry"> <a
+href="http://leetcode.com/2011/05/a-distance-maximizing-problem.html"></a><p>Given an array A of integers, find the maximum of j-i subjected to the constraint of A[i] < A[j].</p></div></div><div
+class="post" id="post-753"><h1 class="posttitle"><a
+href="http://leetcode.com/2011/05/longest-substring-without-repeating-characters.html" rel="bookmark" title="Permanent Link to Longest Substring Without Repeating Characters">Longest Substring Without Repeating Characters</a></h1><p
+class="date">May 16, 2011 at 3:39 am in <a
+href="http://leetcode.com/category/string" title="View all posts in string" rel="category tag">string</a> by <a
+href="http://leetcode.com/members/admin/" title="1337c0d3r">1337c0d3r</a> <span
+class="comments">&middot; <a
+href="http://leetcode.com/2011/05/longest-substring-without-repeating-characters.html#comments" title="Comment on Longest Substring Without Repeating Characters">72 Comments &#187;</a></span></p><div
+class="entry"> <a
+href="http://leetcode.com/2011/05/longest-substring-without-repeating-characters.html"></a><p>Given a string, find the length of the longest substring without repeating characters. For example, the longest substring without repeating letters for &#8220;abcabcbb&#8221; is &#8220;abc&#8221;, which the length is 3. For &#8220;bbbbb&#8221; the longest substring is &#8220;b&#8221;, with the length of 1.</p></div></div><div
+class="post" id="post-729"><h1 class="posttitle"><a
+href="http://leetcode.com/2011/05/determine-if-two-rectangles-overlap.html" rel="bookmark" title="Permanent Link to Determine If Two Rectangles Overlap">Determine If Two Rectangles Overlap</a></h1><p
+class="date">May 12, 2011 at 2:27 am in <a
+href="http://leetcode.com/category/uncategorized" title="View all posts in Uncategorized" rel="category tag">Uncategorized</a> by <a
+href="http://leetcode.com/members/admin/" title="1337c0d3r">1337c0d3r</a> <span
+class="comments">&middot; <a
+href="http://leetcode.com/2011/05/determine-if-two-rectangles-overlap.html#comments" title="Comment on Determine If Two Rectangles Overlap">25 Comments &#187;</a></span></p><div
+class="entry"> <a
+href="http://leetcode.com/2011/05/determine-if-two-rectangles-overlap.html"></a><p>Given two axis-aligned rectangles A and B. Write a function to determine if the two rectangles overlap.</p></div></div><div
+class="post" id="post-612"><h1 class="posttitle"><a
+href="http://leetcode.com/2011/04/construct-binary-tree-from-inorder-and-preorder-postorder-traversal.html" rel="bookmark" title="Permanent Link to Construct Binary Tree From Inorder and Preorder/Postorder Traversal">Construct Binary Tree From Inorder and Preorder/Postorder Traversal</a></h1><p
+class="date">Apr 20, 2011 at 4:30 am in <a
+href="http://leetcode.com/category/binary-tree" title="View all posts in binary tree" rel="category tag">binary tree</a> by <a
+href="http://leetcode.com/members/admin/" title="1337c0d3r">1337c0d3r</a> <span
+class="comments">&middot; <a
+href="http://leetcode.com/2011/04/construct-binary-tree-from-inorder-and-preorder-postorder-traversal.html#comments" title="Comment on Construct Binary Tree From Inorder and Preorder/Postorder Traversal">56 Comments &#187;</a></span></p><div
+class="entry"> <a
+href="http://leetcode.com/2011/04/construct-binary-tree-from-inorder-and-preorder-postorder-traversal.html"></a><p>Given preorder and inorder traversal of a tree, construct the binary tree.</p></div></div><div
+class="post" id="post-538"><h1 class="posttitle"><a
+href="http://leetcode.com/2011/04/the-painters-partition-problem-part-ii.html" rel="bookmark" title="Permanent Link to The Painter&#8217;s Partition Problem Part II">The Painter&#8217;s Partition Problem Part II</a></h1><p
+class="date">Apr 6, 2011 at 10:19 pm in <a
+href="http://leetcode.com/category/binary-search" title="View all posts in binary search" rel="category tag">binary search</a> by <a
+href="http://leetcode.com/members/admin/" title="1337c0d3r">1337c0d3r</a> <span
+class="comments">&middot; <a
+href="http://leetcode.com/2011/04/the-painters-partition-problem-part-ii.html#comments" title="Comment on The Painter&#8217;s Partition Problem Part II">25 Comments &#187;</a></span></p><div
+class="entry"> <a
+href="http://leetcode.com/2011/04/the-painters-partition-problem-part-ii.html"></a><p>Note:<br
+/> This is Part II of the article: <a
+href="http://www.leetcode.com/2011/04/the-painters-partition-problem.html">The Painter&#8217;s Partition Problem</a>. Please read <a
+href="http://www.leetcode.com/2011/04/the-painters-partition-problem.html">Part I</a> for more background information.</p></div></div><div
+class="post" id="post-516"><h1 class="posttitle"><a
+href="http://leetcode.com/2011/04/the-painters-partition-problem.html" rel="bookmark" title="Permanent Link to The Painter&#8217;s Partition Problem Part I">The Painter&#8217;s Partition Problem Part I</a></h1><p
+class="date">Apr 5, 2011 at 3:43 am in <a
+href="http://leetcode.com/category/dynamic-programming" title="View all posts in dynamic programming" rel="category tag">dynamic programming</a> by <a
+href="http://leetcode.com/members/admin/" title="1337c0d3r">1337c0d3r</a> <span
+class="comments">&middot; <a
+href="http://leetcode.com/2011/04/the-painters-partition-problem.html#comments" title="Comment on The Painter&#8217;s Partition Problem Part I">30 Comments &#187;</a></span></p><div
+class="entry"> <a
+href="http://leetcode.com/2011/04/the-painters-partition-problem.html"></a><p>You have to paint N boards of length {A0, A1, A2 … AN-1}. There are K painters available and you are also given how much time a painter takes to paint 1 unit of board. You have to get this job done as soon as possible under the constraints that any painter will only paint continuous sections of board, say board {2, 3, 4} or only board {1} or nothing but not board {2, 4, 5}.</p></div></div><div
+class="post" id="post-463"><h1 class="posttitle"><a
+href="http://leetcode.com/2011/03/median-of-two-sorted-arrays.html" rel="bookmark" title="Permanent Link to Median of Two Sorted Arrays">Median of Two Sorted Arrays</a></h1><p
+class="date">Mar 28, 2011 at 2:23 am in <a
+href="http://leetcode.com/category/uncategorized" title="View all posts in Uncategorized" rel="category tag">Uncategorized</a> by <a
+href="http://leetcode.com/members/admin/" title="1337c0d3r">1337c0d3r</a> <span
+class="comments">&middot; <a
+href="http://leetcode.com/2011/03/median-of-two-sorted-arrays.html#comments" title="Comment on Median of Two Sorted Arrays">114 Comments &#187;</a></span></p><div
+class="entry"> <a
+href="http://leetcode.com/2011/03/median-of-two-sorted-arrays.html"></a><p>There are two sorted arrays A and B of size m and n respectively. Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).</p></div></div><div
+class="post" id="post-83"><h1 class="posttitle"><a
+href="http://leetcode.com/2011/02/coins-in-line.html" rel="bookmark" title="Permanent Link to Coins in a Line">Coins in a Line</a></h1><p
+class="date">Feb 9, 2011 at 3:24 am in <a
+href="http://leetcode.com/category/dynamic-programming" title="View all posts in dynamic programming" rel="category tag">dynamic programming</a> by <a
+href="http://leetcode.com/members/admin/" title="1337c0d3r">1337c0d3r</a> <span
+class="comments">&middot; <a
+href="http://leetcode.com/2011/02/coins-in-line.html#comments" title="Comment on Coins in a Line">50 Comments &#187;</a></span></p><div
+class="entry"> <a
+href="http://leetcode.com/2011/02/coins-in-line.html"></a><p>There are n coins in a line. (Assume n is even). Two players take turns to take a coin from one of the ends of the line until there are no more coins left. The player with the larger amount of money wins.</p><ol><li>Would you rather go first or second? Does it matter?</li><li>Assume that you go first, describe an algorithm to compute the maximum amount of money you can win.</li></ol></div></div><div
+class="post" id="post-76"><h1 class="posttitle"><a
+href="http://leetcode.com/2011/01/find-k-th-smallest-element-in-union-of.html" rel="bookmark" title="Permanent Link to Find the k-th Smallest Element in the Union of Two Sorted Arrays">Find the k-th Smallest Element in the Union of Two Sorted Arrays</a></h1><p
+class="date">Jan 27, 2011 at 2:43 am in <a
+href="http://leetcode.com/category/binary-search" title="View all posts in binary search" rel="category tag">binary search</a> by <a
+href="http://leetcode.com/members/admin/" title="1337c0d3r">1337c0d3r</a> <span
+class="comments">&middot; <a
+href="http://leetcode.com/2011/01/find-k-th-smallest-element-in-union-of.html#comments" title="Comment on Find the k-th Smallest Element in the Union of Two Sorted Arrays">93 Comments &#187;</a></span></p><div
+class="entry"> <a
+href="http://leetcode.com/2011/01/find-k-th-smallest-element-in-union-of.html"></a><p>Given two sorted arrays A, B of size m and n respectively. Find the k-th smallest element in the union of A and B. You can assume that there are no duplicate elements.</p></div></div><div
+class="post" id="post-75"><h1 class="posttitle"><a
+href="http://leetcode.com/2011/01/sliding-window-maximum.html" rel="bookmark" title="Permanent Link to Sliding Window Maximum">Sliding Window Maximum</a></h1><p
+class="date">Jan 25, 2011 at 7:25 pm in <a
+href="http://leetcode.com/category/uncategorized" title="View all posts in Uncategorized" rel="category tag">Uncategorized</a> by <a
+href="http://leetcode.com/members/admin/" title="1337c0d3r">1337c0d3r</a> <span
+class="comments">&middot; <a
+href="http://leetcode.com/2011/01/sliding-window-maximum.html#comments" title="Comment on Sliding Window Maximum">69 Comments &#187;</a></span></p><div
+class="entry"> <a
+href="http://leetcode.com/2011/01/sliding-window-maximum.html"></a><p>A long array A[] is given to you. There is a sliding window of size w which is moving from the very left of the array to the very right. You can only see the w numbers in the window. Each time the sliding window moves rightwards by one position. Following is an example:<br
+/> The array is [1 3 -1 -3 5 3 6 7], and w is 3.</p><p>Window position            &nbsp;<span
+class="readmore"><a
+href="http://leetcode.com/2011/01/sliding-window-maximum.html">[read more &rarr;]</a></span></p></div></div><div
+class="navigation"><div
+class="alignleft"><a
+href="http://leetcode.com/page/2" >&larr; Previous Entries</a></div><div
+class="alignright"></div></div></div></div></div><div
+id="sidebar" class="right_column"><div
+class="padder"><div
+id="login-box" class="widget"><h3 class="widgettitle">Sign In or <a
+href="http://leetcode.com/register/" title="Create an account">Join &rarr;</a></h3><form
+name="login-form" id="sidebar-login-form" class="standard-form" action="http://leetcode.com/wp-login.php" method="post"> <label>Username<br
+/> <input
+type="text" name="log" id="sidebar-user-login" class="input" value="" /></label> <label>Password<br
+/> <input
+type="password" name="pwd" id="sidebar-user-pass" class="input" value="" /></label><p
+class="forgetmenot"><label><input
+name="rememberme" type="checkbox" id="sidebar-rememberme" value="forever" /> Remember Me</label></p> <input
+type="hidden" name="redirect_to" value="" /><input
+type="submit" name="wp-submit" id="sidebar-wp-submit" value="Log In" tabindex="100" /> <input
+type="hidden" name="testcookie" value="1" /></form></div><div
+id="search-5" class="widget widget_search"><form
+role="search" method="get" id="searchform" action="http://leetcode.com/"> <input
+type="text" value="" name="s" id="s" /> <input
+type="submit" id="searchsubmit" value="Search" /></form></div><div
+id="comment-widget-3" class="widget comments"><h3 class="widgettitle">Recent Comments</h3><ul
+class="customized-recent-comments"><li
+class="recentcomment"><div
+class="avatar"><img
+src="http://www.gravatar.com/avatar/4f0b2fc79224a90133ef91d137e8bf96?d=identicon&amp;s=40&amp;r=G" alt="Avatar of GuojiaAgain" class="avatar user-28495-avatar" width="40" height="40" /></div><h3>GuojiaAgain on <a
+href="http://leetcode.com/2011/11/longest-palindromic-substring-part-ii.html">Longest Palindromic Substring Part II</a></h3>Your implementation is simpler but cost more time.<div
+class="comment-meta">Posted Jan 20, 2014</div></li><li
+class="recentcomment"><div
+class="avatar"><img
+alt='' src='http://0.gravatar.com/avatar/65d796168ad36e53079de58cb2560260?s=40&amp;d=identicon&amp;r=G' class='avatar avatar-40 photo' height='40' width='40' /></div><h3>Dale Moore on <a
+href="http://leetcode.com/2010/10/implement-strstr-to-find-substring-in.html">Implement strstr() to Find a Substring in a String</a></h3>I suppose I could do it without the 'else'char *strstr_lecture6(const char *s1, cons...<div
+class="comment-meta">Posted Jan 20, 2014</div></li><li
+class="recentcomment"><div
+class="avatar"><img
+alt='' src='http://0.gravatar.com/avatar/65d796168ad36e53079de58cb2560260?s=40&amp;d=identicon&amp;r=G' class='avatar avatar-40 photo' height='40' width='40' /></div><h3>Dale Moore on <a
+href="http://leetcode.com/2010/10/implement-strstr-to-find-substring-in.html">Implement strstr() to Find a Substring in a String</a></h3> char *strstr(const char *s1, const char *s2)
+{
+const char *a = s1, *b = s2;
+for (...<div
+class="comment-meta">Posted Jan 20, 2014</div></li><li
+class="recentcomment"><div
+class="avatar"><img
+alt='' src='http://1.gravatar.com/avatar/f48a1c119b2b76c3224f12bf05ef5b2e?s=40&amp;d=identicon&amp;r=G' class='avatar avatar-40 photo' height='40' width='40' /></div><h3>Ven on <a
+href="http://leetcode.com/2010/09/how-to-pretty-print-binary-tree.html">How to Pretty Print a Binary Tree</a></h3>Half of my code above disappeared despite trying to post it twice. I can't even edit my po...<div
+class="comment-meta">Posted Jan 19, 2014</div></li><li
+class="recentcomment"><div
+class="avatar"><img
+alt='' src='http://1.gravatar.com/avatar/f48a1c119b2b76c3224f12bf05ef5b2e?s=40&amp;d=identicon&amp;r=G' class='avatar avatar-40 photo' height='40' width='40' /></div><h3>Ven on <a
+href="http://leetcode.com/2010/09/how-to-pretty-print-binary-tree.html">How to Pretty Print a Binary Tree</a></h3> import StringIOclass Queue(object):
+def __init__(self):
+self.a = []def enq...<div
+class="comment-meta">Posted Jan 19, 2014</div></li></ul></div><div
+id="text-4" class="widget widget_text"><h3 class="widgettitle">Subscribe via Email</h3><div
+class="textwidget"><form
+style="padding:3px;text-align:center;" action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=ihas1337code', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true"><p></p><p
+style="text-align:center">Enter your email address:</p><p
+style="text-align:center"><input
+type="text" style="width:140px" name="email" /></p><input
+type="hidden" value="ihas1337code" name="uri" /><input
+type="hidden" name="loc" value="en_US" /><input
+type="submit" value="Subscribe" /><p></p></form></div></div><div
+id="text-3" class="widget widget_text"><h3 class="widgettitle">Subscribe via RSS</h3><div
+class="textwidget"><a
+class="nounderline" href="http://feeds.feedburner.com/ihas1337code"><img
+style="border:0; margin-left:8px;" src="http://www.feedburner.com/fb/images/pub/feed-icon16x16.png" alt="Subscribe to ihas1337code RSS Feed" title="Subscribe to ihas1337code RSS Feed" /></a>&nbsp;&nbsp;&nbsp;<a
+href="http://feeds.feedburner.com/ihas1337code"><img
+src="http://feeds.feedburner.com/~fc/ihas1337code?bg=339900&amp;fg=FFFFFF&amp;anim=1" height="26" width="88" style="border:0; vertical-align:top" alt="Subscribe to ihas1337code RSS Feed" title="Subscribe to ihas1337code RSS Feed" /></a></div></div><div
+id="collapsarch-4" class="widget widget_collapsarch"><h3 class="widgettitle">Problem Archives</h3><ul
+id='widget-collapsarch-4-top' class='collapsing archives list'><li
+class='collapsing archives expand'><span
+title='click to expand' class='collapsing archives expand'><span
+class='sym'></span><a
+href='http://leetcode.com/2012'>2012 <span
+class="yearCount">(2)</span> </a> </span><div
+style='display:none' id='collapsArch-2012:4'><ul><li
+class='collapsing archives expand'><span
+title='click to expand' class='collapsing archives expand'><span
+class='sym'></span><a
+href='http://leetcode.com/2012/05'>May <span
+class="monthCount">(1)</span> </a></span><div
+style='display:none' id='collapsArch-2012-5:4'></div></li><li
+class='collapsing archives expand'><span
+title='click to expand' class='collapsing archives expand'><span
+class='sym'></span><a
+href='http://leetcode.com/2012/01'>January <span
+class="monthCount">(1)</span> </a></span><div
+style='display:none' id='collapsArch-2012-1:4'></div></li></ul></div></li><li
+class='collapsing archives expand'><span
+title='click to expand' class='collapsing archives expand'><span
+class='sym'></span><a
+href='http://leetcode.com/2011'>2011 <span
+class="yearCount">(24)</span> </a> </span><div
+style='display:none' id='collapsArch-2011:4'><ul><li
+class='collapsing archives expand'><span
+title='click to expand' class='collapsing archives expand'><span
+class='sym'></span><a
+href='http://leetcode.com/2011/11'>November <span
+class="monthCount">(2)</span> </a></span><div
+style='display:none' id='collapsArch-2011-11:4'></div></li><li
+class='collapsing archives expand'><span
+title='click to expand' class='collapsing archives expand'><span
+class='sym'></span><a
+href='http://leetcode.com/2011/09'>September <span
+class="monthCount">(1)</span> </a></span><div
+style='display:none' id='collapsArch-2011-9:4'></div></li><li
+class='collapsing archives expand'><span
+title='click to expand' class='collapsing archives expand'><span
+class='sym'></span><a
+href='http://leetcode.com/2011/08'>August <span
+class="monthCount">(2)</span> </a></span><div
+style='display:none' id='collapsArch-2011-8:4'></div></li><li
+class='collapsing archives expand'><span
+title='click to expand' class='collapsing archives expand'><span
+class='sym'></span><a
+href='http://leetcode.com/2011/07'>July <span
+class="monthCount">(3)</span> </a></span><div
+style='display:none' id='collapsArch-2011-7:4'></div></li><li
+class='collapsing archives expand'><span
+title='click to expand' class='collapsing archives expand'><span
+class='sym'></span><a
+href='http://leetcode.com/2011/05'>May <span
+class="monthCount">(3)</span> </a></span><div
+style='display:none' id='collapsArch-2011-5:4'></div></li><li
+class='collapsing archives expand'><span
+title='click to expand' class='collapsing archives expand'><span
+class='sym'></span><a
+href='http://leetcode.com/2011/04'>April <span
+class="monthCount">(3)</span> </a></span><div
+style='display:none' id='collapsArch-2011-4:4'></div></li><li
+class='collapsing archives expand'><span
+title='click to expand' class='collapsing archives expand'><span
+class='sym'></span><a
+href='http://leetcode.com/2011/03'>March <span
+class="monthCount">(1)</span> </a></span><div
+style='display:none' id='collapsArch-2011-3:4'></div></li><li
+class='collapsing archives expand'><span
+title='click to expand' class='collapsing archives expand'><span
+class='sym'></span><a
+href='http://leetcode.com/2011/02'>February <span
+class="monthCount">(1)</span> </a></span><div
+style='display:none' id='collapsArch-2011-2:4'></div></li><li
+class='collapsing archives expand'><span
+title='click to expand' class='collapsing archives expand'><span
+class='sym'></span><a
+href='http://leetcode.com/2011/01'>January <span
+class="monthCount">(8)</span> </a></span><div
+style='display:none' id='collapsArch-2011-1:4'></div></li></ul></div></li><li
+class='collapsing archives expand'><span
+title='click to expand' class='collapsing archives expand'><span
+class='sym'></span><a
+href='http://leetcode.com/2010'>2010 <span
+class="yearCount">(52)</span> </a> </span><div
+style='display:none' id='collapsArch-2010:4'><ul><li
+class='collapsing archives expand'><span
+title='click to expand' class='collapsing archives expand'><span
+class='sym'></span><a
+href='http://leetcode.com/2010/11'>November <span
+class="monthCount">(11)</span> </a></span><div
+style='display:none' id='collapsArch-2010-11:4'></div></li><li
+class='collapsing archives expand'><span
+title='click to expand' class='collapsing archives expand'><span
+class='sym'></span><a
+href='http://leetcode.com/2010/10'>October <span
+class="monthCount">(7)</span> </a></span><div
+style='display:none' id='collapsArch-2010-10:4'></div></li><li
+class='collapsing archives expand'><span
+title='click to expand' class='collapsing archives expand'><span
+class='sym'></span><a
+href='http://leetcode.com/2010/09'>September <span
+class="monthCount">(12)</span> </a></span><div
+style='display:none' id='collapsArch-2010-9:4'></div></li><li
+class='collapsing archives expand'><span
+title='click to expand' class='collapsing archives expand'><span
+class='sym'></span><a
+href='http://leetcode.com/2010/05'>May <span
+class="monthCount">(6)</span> </a></span><div
+style='display:none' id='collapsArch-2010-5:4'></div></li><li
+class='collapsing archives expand'><span
+title='click to expand' class='collapsing archives expand'><span
+class='sym'></span><a
+href='http://leetcode.com/2010/04'>April <span
+class="monthCount">(10)</span> </a></span><div
+style='display:none' id='collapsArch-2010-4:4'></div></li><li
+class='collapsing archives expand'><span
+title='click to expand' class='collapsing archives expand'><span
+class='sym'></span><a
+href='http://leetcode.com/2010/03'>March <span
+class="monthCount">(2)</span> </a></span><div
+style='display:none' id='collapsArch-2010-3:4'></div></li><li
+class='collapsing archives expand'><span
+title='click to expand' class='collapsing archives expand'><span
+class='sym'></span><a
+href='http://leetcode.com/2010/02'>February <span
+class="monthCount">(4)</span> </a></span><div
+style='display:none' id='collapsArch-2010-2:4'></div></li></ul></div></li><li
+style='display:none'><script type="text/javascript">
+// <![CDATA[
+/* These variables are part of the Collapsing Archives Plugin
+   * version: 2.0
+   * revision: $Id: collapsArch.php 529121 2012-04-09 17:07:49Z robfelty $
+   * Copyright 2008 Robert Felty (robfelty.com)
+           */
+try { collapsItems['catTest'] = 'test'; } catch (err) { collapsItems = new Object(); }
+collapsItems['collapsArch-2012-5:4'] = '<ul>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2012/05/clone-graph-part-i.html\' title=\'Clone Graph Part I\'>Clone Graph Part I</a></li></ul>';
+collapsItems['collapsArch-2012-1:4'] = '<ul>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2012/01/palindrome-number.html\' title=\'Palindrome Number\'>Palindrome Number</a></li></ul>';
+collapsItems['collapsArch-2011-11:4'] = '<ul>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2011/11/longest-palindromic-substring-part-ii.html\' title=\'Longest Palindromic Substring Part II\'>Longest Palindromic Substring Part II</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2011/11/longest-palindromic-substring-part-i.html\' title=\'Longest Palindromic Substring Part I\'>Longest Palindromic Substring Part I</a></li></ul>';
+collapsItems['collapsArch-2011-9:4'] = '<ul>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2011/09/regular-expression-matching.html\' title=\'Regular Expression Matching\'>Regular Expression Matching</a></li></ul>';
+collapsItems['collapsArch-2011-8:4'] = '<ul>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2011/08/insert-into-a-cyclic-sorted-list.html\' title=\'Insert into a Cyclic Sorted List\'>Insert into a Cyclic Sorted List</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2011/08/reverse-bits.html\' title=\'Reverse Bits\'>Reverse Bits</a></li></ul>';
+collapsItems['collapsArch-2011-7:4'] = '<ul>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2011/07/lowest-common-ancestor-of-a-binary-tree-part-ii.html\' title=\'Lowest Common Ancestor of a Binary Tree Part II\'>Lowest Common Ancestor of a Binary Tree Part II</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2011/07/lowest-common-ancestor-of-a-binary-tree-part-i.html\' title=\'Lowest Common Ancestor of a Binary Tree Part I\'>Lowest Common Ancestor of a Binary Tree Part I</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2011/07/lowest-common-ancestor-of-a-binary-search-tree.html\' title=\'Lowest Common Ancestor of a Binary Search Tree (BST)\'>Lowest Common Ancestor of a Binary Search Tree (BST)</a></li></ul>';
+collapsItems['collapsArch-2011-5:4'] = '<ul>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2011/05/a-distance-maximizing-problem.html\' title=\'A Distance Maximizing Problem\'>A Distance Maximizing Problem</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2011/05/longest-substring-without-repeating-characters.html\' title=\'Longest Substring Without Repeating Characters\'>Longest Substring Without Repeating Characters</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2011/05/determine-if-two-rectangles-overlap.html\' title=\'Determine If Two Rectangles Overlap\'>Determine If Two Rectangles Overlap</a></li></ul>';
+collapsItems['collapsArch-2011-4:4'] = '<ul>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2011/04/construct-binary-tree-from-inorder-and-preorder-postorder-traversal.html\' title=\'Construct Binary Tree From Inorder and Preorder/Postorder Traversal\'>Construct Binary Tree From Inorder and Preorder/Postorder Traversal</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2011/04/the-painters-partition-problem-part-ii.html\' title=\'The Painter\'s Partition Problem Part II\'>The Painter\'s Partition Problem Part II</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2011/04/the-painters-partition-problem.html\' title=\'The Painter\'s Partition Problem Part I\'>The Painter\'s Partition Problem Part I</a></li></ul>';
+collapsItems['collapsArch-2011-3:4'] = '<ul>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2011/03/median-of-two-sorted-arrays.html\' title=\'Median of Two Sorted Arrays\'>Median of Two Sorted Arrays</a></li></ul>';
+collapsItems['collapsArch-2011-2:4'] = '<ul>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2011/02/coins-in-line.html\' title=\'Coins in a Line\'>Coins in a Line</a></li></ul>';
+collapsItems['collapsArch-2011-1:4'] = '<ul>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2011/01/find-k-th-smallest-element-in-union-of.html\' title=\'Find the k-th Smallest Element in the Union of Two Sorted Arrays\'>Find the k-th Smallest Element in the Union of Two Sorted Arrays</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2011/01/sliding-window-maximum.html\' title=\'Sliding Window Maximum\'>Sliding Window Maximum</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2011/01/nuts-in-oasis-interview-question-from.html\' title=\'Nuts in an Oasis\'>Nuts in an Oasis</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2011/01/studious-student-problem-analysis.html\' title=\'Studious Student Problem Analysis\'>Studious Student Problem Analysis</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2011/01/peg-game-problem-analysis.html\' title=\'Peg Game Problem Analysis\'>Peg Game Problem Analysis</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2011/01/double-square-problem-analysis.html\' title=\'Double Square Problem Analysis\'>Double Square Problem Analysis</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2011/01/facebook-hacker-cup.html\' title=\'Facebook Hacker Cup Online Qualification Round Begins Now!\'>Facebook Hacker Cup Online Qualification Round Begins Now!</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2011/01/ctrla-ctrlc-ctrlv.html\' title=\'CTRL+A, CTRL+C, CTRL+V\'>CTRL+A, CTRL+C, CTRL+V</a></li></ul>';
+collapsItems['collapsArch-2010-11:4'] = '<ul>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/11/convert-binary-search-tree-bst-to.html\' title=\'Convert Binary Search Tree (BST) to Sorted Doubly-Linked List\'>Convert Binary Search Tree (BST) to Sorted Doubly-Linked List</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/11/convert-sorted-list-to-balanced-binary.html\' title=\'Convert Sorted List to Balanced Binary Search Tree (BST)\'>Convert Sorted List to Balanced Binary Search Tree (BST)</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/11/convert-sorted-array-into-balanced.html\' title=\'Convert Sorted Array to Balanced Binary Search Tree (BST)\'>Convert Sorted Array to Balanced Binary Search Tree (BST)</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/11/largest-binary-search-tree-bst-in_22.html\' title=\'Largest Binary Search Tree (BST) in a Binary Tree\'>Largest Binary Search Tree (BST) in a Binary Tree</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/11/largest-binary-search-tree-bst-in.html\' title=\'Largest Subtree Which is a Binary Search Tree (BST)\'>Largest Subtree Which is a Binary Search Tree (BST)</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/11/stack-that-supports-push-pop-and-getmin.html\' title=\'Stack that Support Push, Pop, and GetMin in Constant Time\'>Stack that Support Push, Pop, and GetMin in Constant Time</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/11/finding-minimum-window-in-s-which.html\' title=\'Finding the Minimum Window in S which Contains All Elements from T\'>Finding the Minimum Window in S which Contains All Elements from T</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/11/best-time-to-buy-and-sell-stock.html\' title=\'Best Time to Buy and Sell Stock\'>Best Time to Buy and Sell Stock</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/11/rejection-sampling.html\' title=\'Rejection Sampling\'>Rejection Sampling</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/11/microsoft-string-replacement-problem.html\' title=\'A String Replacement Problem\'>A String Replacement Problem</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/11/unique-paths.html\' title=\'Unique Paths\'>Unique Paths</a></li></ul>';
+collapsItems['collapsArch-2010-10:4'] = '<ul>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/10/binary-tree-post-order-traversal.html\' title=\'Binary Tree Post-Order Traversal Iterative Solution\'>Binary Tree Post-Order Traversal Iterative Solution</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/10/print-edge-nodes-boundary-of-binary.html\' title=\'Print Edge Nodes (Boundary) of a Binary Tree\'>Print Edge Nodes (Boundary) of a Binary Tree</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/10/implement-strstr-to-find-substring-in.html\' title=\'Implement strstr() to Find a Substring in a String\'>Implement strstr() to Find a Substring in a String</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/10/searching-2d-sorted-matrix-part-iii.html\' title=\'Searching a 2D Sorted Matrix Part III\'>Searching a 2D Sorted Matrix Part III</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/10/searching-2d-sorted-matrix-part-ii.html\' title=\'Searching a 2D Sorted Matrix Part II\'>Searching a 2D Sorted Matrix Part II</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/10/searching-2d-sorted-matrix.html\' title=\'Searching a 2D Sorted Matrix Part I\'>Searching a 2D Sorted Matrix Part I</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/10/amazon-bar-raiser-interview-question.html\' title=\'Excel Sheet Row Numbers\'>Excel Sheet Row Numbers</a></li></ul>';
+collapsItems['collapsArch-2010-9:4'] = '<ul>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/09/print-all-combinations-of-number-as-sum.html\' title=\'Print All Combinations of a Number as a Sum of Candidate Numbers\'>Print All Combinations of a Number as a Sum of Candidate Numbers</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/09/serializationdeserialization-of-binary.html\' title=\'Serialization/Deserialization of a Binary Tree\'>Serialization/Deserialization of a Binary Tree</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/09/saving-binary-search-tree-to-file.html\' title=\'Saving a Binary Search Tree to a File\'>Saving a Binary Search Tree to a File</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/09/how-to-pretty-print-binary-tree.html\' title=\'How to Pretty Print a Binary Tree\'>How to Pretty Print a Binary Tree</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/09/printing-binary-tree-in-zig-zag-level_18.html\' title=\'Printing a Binary Tree in Zig Zag Level-Order\'>Printing a Binary Tree in Zig Zag Level-Order</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/09/binary-tree-level-order-traversal-using_17.html\' title=\'Binary Tree Level-Order Traversal Using Depth First Search (DFS)\'>Binary Tree Level-Order Traversal Using Depth First Search (DFS)</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/09/printing-binary-tree-in-level-order.html\' title=\'Printing a Binary Tree in Level Order\'>Printing a Binary Tree in Level Order</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/09/determine-if-binary-tree-is-binary.html\' title=\'Determine if a Binary Tree is a Binary Search Tree (BST)\'>Determine if a Binary Tree is a Binary Search Tree (BST)</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/09/detecting-loop-in-singly-linked-list.html\' title=\'Detecting a Loop in a Singly Linked List\'>Detecting a Loop in a Singly Linked List</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/09/splitting-linked-list.html\' title=\'Splitting Linked List\'>Splitting Linked List</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/09/number-of-1-bits.html\' title=\'Number of 1 bits\'>Number of 1 bits</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/09/fun-with-bit-operations.html\' title=\'Fun with Bit Operations\'>Fun with Bit Operations</a></li></ul>';
+collapsItems['collapsArch-2010-5:4'] = '<ul>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/05/problem-c-theme-park-solution.html\' title=\'Problem C: Theme Park Solution (Google Code Jam Qualification Round 2010)\'>Problem C: Theme Park Solution (Google Code Jam Qualification Round 2010)</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/05/problem-b-fair-warning-solution.html\' title=\'Problem B: Fair Warning Solution (Google Code Jam Qualification Round 2010)\'>Problem B: Fair Warning Solution (Google Code Jam Qualification Round 2010)</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/05/problem-snapper-chain-gcj-qualification.html\' title=\'Problem A: Snapper Chain Solution (Google Code Jam Qualification Round 2010)\'>Problem A: Snapper Chain Solution (Google Code Jam Qualification Round 2010)</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/05/google-code-jam-qualification-round.html\' title=\'Google Code Jam Qualification Round 2010\'>Google Code Jam Qualification Round 2010</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/05/here-is-another-google-phone-interview.html\' title=\'String Reorder Distance Apart\'>String Reorder Distance Apart</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/05/printing-matrix-in-spiral-order.html\' title=\'Printing Matrix (2D array) in Spiral Order\'>Printing Matrix (2D array) in Spiral Order</a></li></ul>';
+collapsItems['collapsArch-2010-4:4'] = '<ul>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/04/finding-prime-numbers.html\' title=\'Finding prime numbers\'>Finding prime numbers</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/04/maximum-height-of-binary-tree.html\' title=\'Maximum Height (Depth) of a Binary Tree\'>Maximum Height (Depth) of a Binary Tree</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/04/binary-search-tree-in-order-traversal.html\' title=\'Binary Search Tree In-Order Traversal Iterative Solution\'>Binary Search Tree In-Order Traversal Iterative Solution</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/04/multiplication-of-numbers.html\' title=\'Multiplication of numbers\'>Multiplication of numbers</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/04/hacking-google-interview-from-mit.html\' title=\'Hacking a Google interview (From MIT)\'>Hacking a Google interview (From MIT)</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/04/rotating-array-in-place.html\' title=\'Rotating an array in place\'>Rotating an array in place</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/04/searching-element-in-rotated-array.html\' title=\'Searching an Element in a Rotated Sorted Array\'>Searching an Element in a Rotated Sorted Array</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/04/finding-all-unique-triplets-that-sums.html\' title=\'Finding all unique triplets that sums to zero\'>Finding all unique triplets that sums to zero</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/04/how-to-determine-if-point-is-inside.html\' title=\'How to determine if a point is inside a rectangle?\'>How to determine if a point is inside a rectangle?</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/04/reversing-linked-list-iteratively-and.html\' title=\'Reversing linked list iteratively and recursively\'>Reversing linked list iteratively and recursively</a></li></ul>';
+collapsItems['collapsArch-2010-3:4'] = '<ul>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/03/here-is-phone-screening-question-from.html\' title=\'Finding intersection of two sorted arrays\'>Finding intersection of two sorted arrays</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/03/first-on-site-technical-interview.html\' title=\'A binary tree problem - Populating next right pointers in each node\'>A binary tree problem - Populating next right pointers in each node</a></li></ul>';
+collapsItems['collapsArch-2010-2:4'] = '<ul>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/02/here-is-one-of-questions-from-microsoft.html\' title=\'Recursion to the rescue!\'>Recursion to the rescue!</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/02/c-code-to-count-number-of-words-in.html\' title=\'C code to count the number of words in a string\'>C code to count the number of words in a string</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/02/c-code-to-remove-spaces-from-string.html\' title=\'C code to remove spaces from a string\'>C code to remove spaces from a string</a></li>          <li class=\'collapsing archives item\'><a href=\'http://leetcode.com/2010/02/interview-tips-for-programmers.html\' title=\'Interview tips for programmers\'>Interview tips for programmers</a></li></ul>';
+/*  Collapse Functions, version 2.0
+ *
+ *--------------------------------------------------------------------------*/
+String.prototype.trim = function() {
+  return this.replace(/^\s+|\s+$/g,"");
+}
+
+function createCookie(name,value,days) {
+  if (days) {
+    var date = new Date();
+    date.setTime(date.getTime()+(days*24*60*60*1000));
+    var expires = "; expires="+date.toGMTString();
+  } else {
+    var expires = "";
+  }
+  document.cookie = name+"="+value+expires+"; path=/";
+}
+
+function readCookie(name) {
+  var nameEQ = name + "=";
+  var ca = document.cookie.split(';');
+  for(var i=0;i < ca.length;i++) {
+    var c = ca[i];
+    while (c.charAt(0)==' ') {
+      c = c.substring(1,c.length);
+    }
+    if (c.indexOf(nameEQ) == 0) {
+      return c.substring(nameEQ.length,c.length);
+    }
+  }
+  return null;
+}
+
+function eraseCookie(name) {
+  createCookie(name,"",-1);
+}
+
+function addExpandCollapse(id, expandSym, collapseSym, accordion) {
+  jQuery('#' + id + ' span.expand').live('click', function() {
+    if (accordion==1) {
+      var theDiv = jQuery(this).parent().parent().find('span.collapse').parent().children('div');
+      jQuery(theDiv).hide('normal');
+      jQuery(this).parent().parent().find('span.collapse').removeClass('collapse').addClass('expand');
+      createCookie(theDiv.attr('id'), 0, 7);
+      jQuery(this).parent().parent().find('span.sym').html(expandSym);
+      //jQuery('#' + id + ' .expand .sym').html(expandSym);
+    }
+    expandArch(this, expandSym, collapseSym);
+    return false;
+  });
+  jQuery('#' + id + ' span.collapse').live('click', function() {
+    collapseArch(this, expandSym, collapseSym);
+    return false;
+  });
+}
+
+function expandArch(symbol, expandSym, collapseSym) {
+    var theDiv = jQuery(symbol).parent().children('div');
+    try {
+      if (collapsItems[jQuery(theDiv).attr('id')]!='') {
+        jQuery(theDiv).html(collapsItems[jQuery(theDiv).attr('id')]).show('normal');
+      } else {
+        jQuery(theDiv).show('normal');
+      }
+    } catch (err) {
+      jQuery(theDiv).show('normal');
+    }
+    jQuery(symbol).removeClass('expand').addClass('collapse');
+    jQuery(symbol).children('.sym').html(collapseSym);
+  createCookie(theDiv.attr('id'), 1, 7);
+}
+function collapseArch(symbol, expandSym, collapseSym) {
+    var theDiv = jQuery(symbol).parent().children('div');
+    jQuery(theDiv).hide('normal');
+    jQuery(symbol).removeClass('collapse').addClass('expand');
+    jQuery(symbol).children('.sym').html(expandSym);
+  createCookie(theDiv.attr('id'), 0, 7);
+}
+addExpandCollapse('widget-collapsarch-4-top','', '', 0)// ]]>
+</script></li></ul></div><div
+id="wpp-4" class="widget popular-posts"><h3 class="widgettitle">Top Interview Questions</h3><ul><li><a
+href="http://leetcode.com/onlinejudge" title="Online Judge" class="wpp-post-title">Online Judge</a> <span
+class="post-stats"></span></li><li><a
+href="http://leetcode.com/register" title="Register" class="wpp-post-title">Register</a> <span
+class="post-stats"></span></li><li><a
+href="http://leetcode.com/2011/04/construct-binary-tree-from-inorder-and-preorder-postorder-traversal.html" title="Construct Binary Tree From Inorder and Preorder/Postorder Traversal" class="wpp-post-title">Construct Binary Tree From Inorder and Preorder/Postorder Traversal</a> <span
+class="post-stats"></span></li><li><a
+href="http://leetcode.com/2010/04/binary-search-tree-in-order-traversal.html" title="Binary Search Tree In-Order Traversal Iterative Solution" class="wpp-post-title">Binary Search Tree In-Order Traversal Iterative Solution</a> <span
+class="post-stats"></span></li><li><a
+href="http://leetcode.com/2010/10/binary-tree-post-order-traversal.html" title="Binary Tree Post-Order Traversal Iterative Solution" class="wpp-post-title">Binary Tree Post-Order Traversal Iterative Solution</a> <span
+class="post-stats"></span></li><li><a
+href="http://leetcode.com/2010/04/maximum-height-of-binary-tree.html" title="Maximum Height (Depth) of a Binary Tree" class="wpp-post-title">Maximum Height (Depth) of a Binary Tree</a> <span
+class="post-stats"></span></li><li><a
+href="http://leetcode.com/2011/11/longest-palindromic-substring-part-i.html" title="Longest Palindromic Substring Part I" class="wpp-post-title">Longest Palindromic Substring Part I</a> <span
+class="post-stats"></span></li><li><a
+href="http://leetcode.com/2010/09/printing-binary-tree-in-level-order.html" title="Printing a Binary Tree in Level Order" class="wpp-post-title">Printing a Binary Tree in Level Order</a> <span
+class="post-stats"></span></li><li><a
+href="http://leetcode.com/2011/11/longest-palindromic-substring-part-ii.html" title="Longest Palindromic Substring Part II" class="wpp-post-title">Longest Palindromic Substring Part II</a> <span
+class="post-stats"></span></li><li><a
+href="http://leetcode.com/2011/01/find-k-th-smallest-element-in-union-of.html" title="Find the k-th Smallest Element in the Union of Two Sorted Arrays" class="wpp-post-title">Find the k-th Smallest Element in the Union of Two Sorted Arrays</a> <span
+class="post-stats"></span></li></ul></div><div
+id="categories-4" class="widget widget_categories"><h3 class="widgettitle">Categories</h3><ul><li
+class="cat-item cat-item-5"><a
+href="http://leetcode.com/category/backtracking" title="View all posts filed under backtracking">backtracking</a></li><li
+class="cat-item cat-item-6"><a
+href="http://leetcode.com/category/binary-search" title="View all posts filed under binary search">binary search</a></li><li
+class="cat-item cat-item-7"><a
+href="http://leetcode.com/category/binary-tree" title="View all posts filed under binary tree">binary tree</a></li><li
+class="cat-item cat-item-8"><a
+href="http://leetcode.com/category/bit-operations" title="View all posts filed under bit operations">bit operations</a></li><li
+class="cat-item cat-item-12"><a
+href="http://leetcode.com/category/divide-and-conquer" title="View all posts filed under divide and conquer">divide and conquer</a></li><li
+class="cat-item cat-item-14"><a
+href="http://leetcode.com/category/dynamic-programming" title="View all posts filed under dynamic programming">dynamic programming</a></li><li
+class="cat-item cat-item-24"><a
+href="http://leetcode.com/category/linked-list" title="View all posts filed under linked list">linked list</a></li><li
+class="cat-item cat-item-37"><a
+href="http://leetcode.com/category/string" title="View all posts filed under string">string</a></li><li
+class="cat-item cat-item-1"><a
+href="http://leetcode.com/category/uncategorized" title="View all posts filed under Uncategorized">Uncategorized</a></li></ul></div></div></div></div><div
+id="push"></div></div><div
+id="footer"><div
+id="colophon"><div
+class="footer-widget"></div><div
+class="footer-widget"></div><div
+class="footer-widget"></div><div
+class="footer-widget last"></div><div
+class="clear"></div><div
+id="footer-links"><ul
+class="footer-menu"><li
+class="page_item page-item-2"><a
+href="http://leetcode.com/about">About</a></li><li
+class="page_item page-item-908"><a
+href="http://leetcode.com/activity">Activity</a></li><li
+class="page_item page-item-1466"><a
+href="http://leetcode.com/discuss">Discuss</a></li><li
+class="page_item page-item-1658"><a
+href="http://leetcode.com/donate">Donate</a></li><li
+class="page_item page-item-907"><a
+href="http://leetcode.com/members">Members</a></li><li
+class="page_item page-item-370"><a
+href="http://leetcode.com/onlinejudge">Online Judge</a></li></ul></div><div
+id="credits"><p>Copyright &copy; 2014 LeetCode &nbsp;&middot;&nbsp; <a
+href="http://leetcode.com/wp-login.php">Log in</a></p></div></div></div><div
+id="wpadminbar" class="nojq nojs" role="navigation"> <a
+class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a><div
+class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Top navigation toolbar." tabindex="0"><ul
+id="wp-admin-bar-root-default" class="ab-top-menu"><li
+id="wp-admin-bar-bp-login"><a
+class="ab-item"  href="http://leetcode.com/wp-login.php">Log in</a></li><li
+id="wp-admin-bar-bp-register"><a
+class="ab-item"  href="http://leetcode.com/register/">Register</a></li><li
+id="wp-admin-bar-my-account"><div
+class="ab-item ab-empty-item" ></div></li></ul></div> <a
+class="screen-reader-shortcut" href="http://leetcode.com/wp-login.php?action=logout&#038;_wpnonce=4524d19693">Log Out</a></div><div
+class="buddyboss_log"></div> <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-6849839-3']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script><style type="text/css">
+    .defaultCommentText { color: #a1a1a1; font-style: italic; }
+  </style><script type="text/javascript">
+    jQuery("textarea#comment, textarea#reply_text").focus(function(srcc) {
+      if (jQuery(this).val() == jQuery(this)[0].title) {
+        jQuery(this).val("");
+        jQuery(this).removeClass("defaultCommentText");
+      }
+    });
+    jQuery("textarea#comment, textarea#reply_text").blur(function() {
+      if (jQuery(this).val() == "") {
+        jQuery(this).val(jQuery(this)[0].title);
+        jQuery(this).addClass("defaultCommentText");
+      }
+    });
+    jQuery("textarea#comment, textarea#reply_text").attr('title', 'To embed your code, please use <code>your code here</code>.');
+    jQuery("textarea#comment, textarea#reply_text").blur();
+  </script></body></html>
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Minified using disk: basic
+Page Caching using disk: enhanced
+
+ Served from: leetcode.com @ 2014-01-20 23:51:44 by W3 Total Cache -->

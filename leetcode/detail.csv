@@ -1,0 +1,62 @@
+Determine whether an integer is a palindrome. Do this without extra space.
+Given a string S, find the longest palindromic substring in S.
+Given a node from a cyclic linked list which has been sorted, write a function to insert a value into the list such that it remains a cyclic sorted list. The given node can be any single node in the list.
+Given a binary tree, find the lowest common ancestor of two given nodes in the tree. Each node contains a parent pointer which links to its parent.
+Given two singly linked lists and they both intersect at one point (ie, forming a Y shaped list). Find where the two linked lists merge.
+Given a binary search tree (BST), find the lowest common ancestor of two given nodes in the BST.
+Given a string, find the length of the longest substring without repeating characters. For example, the longest substring without repeating letters for “abcabcbb” is “abc”, which the length is 3. For “bbbbb” the longest substring is “b”, with the length of 1.
+Given preorder and inorder traversal of a tree, construct the binary tree.
+You have to paint N boards of length {A0, A1, A2 … AN-1}. There are K painters available and you are also given how much time a painter takes to paint 1 unit of board. You have to get this job done as soon as possible under the constraints that any painter will only paint continuous sections of board, say board {2, 3, 4} or only board {1} or nothing but not board {2, 4, 5}.
+There are n coins in a line. (Assume n is even). Two players take turns to take a coin from one of the ends of the line until there are no more coins left. The player with the larger amount of money wins.Would you rather go first or second? Does it matter?Assume that you go first, describe an algorithm to compute the maximum amount of money you can win.
+A long array A[] is given to you. There is a sliding window of size w which is moving from the very left of the array to the very right. You can only see the w numbers in the window. Each time the sliding window moves rightwards by one position. Following is an example: The array is [1 3 -1 -3 5 3 6 7], and w is 3.Window position                Max
+---------------               -----
+[1  3  -1] -3  5  3  6  7       3
+ 1 [3  -1  -3] 5  3  6  7       3
+ 1  3 [-1  -3  5] 3  6  7       5
+ 1  3  -1 [-3  5  3] 6  7       5
+ 1  3  -1  -3 [5  3  6] 7       6
+ 1  3  -1  -3  5 [3  6  7]      7Input: A long array A[], and a window width wOutput: An array B[], B[i] is the maximum value of from A[i] to A[i+w-1]Requirement: Find a good optimal way to get B[i]
+You’ve been given a list of words to study and memorize. Being a diligent student of language and the arts, you’ve decided to not study them at all and instead make up pointless games based on them. One game you’ve come up with is to see how you can concatenate the words to generate the lexicographically lowest possible string.InputAs input for playing this game you will receive a text file containing an integer N, the number of word sets you need to play your game against. This will be followed by N word sets, each starting with an integer M, the number of words in the set, followed by M words. All tokens in the input will be separated by some whitespace and, aside from N and M, will consist entirely of lowercase letters.OutputYour submission should contain the lexicographically shortest strings for each corresponding word set, one per line and in order.Constraints1 <= N <= 1001 <= M <= 91 <= all word lengths <= 10
+A double-square number is an integer X which can be expressed as the sum of two perfect squares. For example, 10 is a double-square because 10 = 32 + 12. Your task in this problem is, given X, determine the number of ways in which it can be written as the sum of two squares. For example, 10 can only be written as 32 + 12 (we don’t count 12 + 32 as being different). On the other hand, 25 can be written as 52 + 02 or as 42 + 32.InputYou should first read an integer N, the number of test cases. The next N lines will contain N values of X.Constraints0 = X = 21474836471 = N = 100OutputFor each value of X, you should output the number of ways to write X as the sum of two squares.
+Imagine you have a special keyboard with the following keys:ACtrl+ACtrl+CCtrl+Vwhere CTRL+A, CTRL+C, CTRL+V each acts as one function key for “Select All”, “Copy”, and “Paste” operations respectively.If you can only press the keyboard for N times (with the above four keys), please write a program to produce maximum numbers of A. If possible, please also print out the sequence of keys.That is to say, the input parameter is N (No. of keys that you can press), the output is M (No. of As that you can produce).
+Given a singly linked list where elements are sorted in ascending order, convert it to a height balanced BST.
+Given a binary tree, find the largest Binary Search Tree (BST), where largest means BST with largest number of nodes in it. The largest BST may or may not include all of its descendants.
+Design a stack that supports push, pop, and retrieving the minimum element in constant time. Can you do this?
+Design a queue that supports push_rear, pop_front, and get_min in O(1). Would that be elegantly possible too?
+Say you have an array for which the ith element is the price of a given stock on day i.If you were only permitted to buy one share of the stock and sell one share of the stock, design an algorithm to find the best times to buy and sell.
+Replace all occurrence of the given pattern to ‘X’.For example, given that the pattern=”abc”, replace “abcdeffdfegabcabc” with “XdeffdfegX”. Note that multiple occurrences of abc’s that are contiguous will be replaced with only one ‘X’.
+Given a binary tree, print the elements in post-order iteratively without using recursion.
+ public void postOrder_iterative(Tree root){ Stack s = new Stack(); Tree current = root; Tree prevElement = null; while(!s.empty() || current !=null){ if(current !=null){ s.push(current); current = current.left; }else{ current = s.lastElement(); if(current.right == null || current.right == prevElement){ System.out.println(current.value); prevElement = current; s.pop(); current = null; }else{ current = current.right; } } } }
+Write C code to implement the strstr (Search for a substring) function. Do not use any system library such as strlen.
+Write an efficient algorithm that searches for a value in an n x m table (two-dimensional array). This table is sorted along the rows and columns — that is,Table[i][j] ≤ Table[i][j + 1], Table[i][j] ≤ Table[i + 1][j]
+Given the sequence S1 = {a,b,c,d,…,x,y,z,aa,ab,ac…. } and given that this sequence corresponds (term for term) to the sequence S2 = {0,1,2,3,….}. Write code to convert an element of S2 to the corresponding element of S1.
+Design an algorithm and write code to serialize and deserialize a binary tree. Writing the tree to a file is called ‘serialization’ and reading back from the file to reconstruct the exact same binary tree is ‘deserialization’.
+Have you ever thought of pretty-printing a binary tree?
+Given a binary tree, print out the tree in level order (ie, from left to right, level by level). Output a newline after the end of each level. Breadth First Search (BFS) is not allowed.     3
+   /  \
+  9   20    
+     /  \
+    15    7
+For example, the level order output of the tree above is:3 
+9 20 
+15 7
+Write a function isBST(BinaryTree *node) to verify if a given binary tree is a Binary Search Tree (BST) or not.
+Given a list, split it into two sublists — one for the front half, and one for the back half. If the number of elements is odd, the extra element should go in the front list. So FrontBackSplit() on the list {2, 3, 5, 7, 11} should yield the two lists {2, 3, 5} and {7, 11}.
+What does the following function mystery() do?
+Read the question here from GCJ Qualification Round 2010:� Problem B: Fair Warning
+Given a list of positive integers: t1, t2, …, tn, and ti ? tj for some i, j. Find the smallest integer y >= 0 such that each ti + y is divisible by an integer T. T must be the largest of all possible divisors.
+Google Code Jam has begun and there is still time to compete, so register and start coding now if you have not!� Participate in Google Code Jam Now!
+Given a matrix (2D array) of m x n elements (m rows, n columns), write a function that prints the elements in the array in a spiral manner.
+Given a binary tree, find its maximum height.
+There is an array A[N] of N numbers. You have to compose an array Output[N] such that Output[i] will be equal to multiplication of all the elements of A[N] except A[i]. Solve it without division operator and in O(n).For example Output[0] will be multiplication of A[1] to A[N-1] and Output[1] will be multiplication of A[0] and from A[2] to A[N-1].Example:A: {4, 3, 2, 1, 2}OUTPUT: {12, 16, 24, 48, 24}
+Rotate a one-dimensional array of n elements to the right by k steps. For instance, with n=7 and k=3, the array {a, b, c, d, e, f, g} is rotated to {e, f, g, a, b, c, d}.
+Given a set S of n integers, are there elements a, b, c in S such that a + b + c = 0? Find all unique triplets in the set which gives the sum of zero.For example, given set S = {-1 0 1 2 -1 -4},One possible solution set is:(-1, 0, 1)(-1, 2, -1)Note that (0, 1, -1) is not part of the solution above, because (0, 1, -1) is the duplicate of (-1, 0, 1). Same with (-1, -1, 2).For a set S, there is probably no “the” solution, another solution could be:(0, 1, -1)(2, -1, -1)
+Given a set S of n integers, find all pairs of integers of a and b in S such that a + b = k?
+Implement the reversal of a singly linked list iteratively and recursively.
+Given a binary tree
+struct Node {
+  Node* leftChild;
+  Node* rightChild;
+  Node* nextRight;
+}12345struct Node {��Node* leftChild;��Node* rightChild;��Node* nextRight;}Populate the nextRight pointers in each node.You may assume that it is a full binary tree (ie, each node other than the leaves has two children.)
+Count the number of words in a string, where a word is defined to be a contiguous sequence of non-space characters.eg, “Hello, my name is John.” -> 5

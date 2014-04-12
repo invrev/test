@@ -1,0 +1,529 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html
+xmlns="http://www.w3.org/1999/xhtml" lang="en-US"><head
+profile="http://gmpg.org/xfn/11"><link
+rel="stylesheet" type="text/css" href="http://leetcode.com/wp-content/cache/minify/000000/PY5RDsMwCEMvVMb2sQOlCWojNQkCqi47_Wha7QPZQg-bJ6r1jaY3hlRyhTnIw3V64byn1FlIFWeG2IQwuv9jjsRdrZX8pQRCkao5VoqrDvRKPs7jar7FJYFaEJBguS6DueyZJaG3CtqrhQ-seVk3HyMZmHfexP3d0SSN54Ab75uHclO7O_Fg_gE.css" media="all" /><script type="text/javascript" src="http://leetcode.com/wp-content/cache/minify/000000/LYtrDsMgDIMvRBZN632m8BBQQeiSVBu3H532w3LsfH7g_jqTTHfHHEGNBISscsZdV6OyHkFoDgadbPSBUnNpS5bkYnrlP3Bbp3sfEAZbYkMrqSdFf8Y4_VDFZ-WAuQ1PzW0YRu8LA0lHm7_thhSXgye58hc.js"></script><meta
+http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta
+name="viewport" content="width=device-width, initial-scale=1.0" /><title>Interview tips for programmers | LeetCode</title><link
+rel="pingback" href="http://leetcode.com/xmlrpc.php" /><link
+rel="shortcut icon" href="http://leetcode.com/wp-content/themes/buddyboss-child/_inc/images/favicon.ico" type="image/x-icon"><link
+rel="alternate" type="application/rss+xml" title="LeetCode &raquo; Feed" href="http://leetcode.com/feed" /><link
+rel="alternate" type="application/rss+xml" title="LeetCode &raquo; Comments Feed" href="http://leetcode.com/comments/feed" /><link
+rel="alternate" type="application/rss+xml" title="LeetCode &raquo; Interview tips for programmers Comments Feed" href="http://leetcode.com/2010/02/interview-tips-for-programmers.html/feed" /><link
+rel='stylesheet' id='gdsr_style_main-css'  href='http://leetcode.com/wp-content/plugins/gd-star-rating/css/gdsr.css.php?t=1366376824&#038;s=a05i05m20k20c05r05%23121620243046%23121620243240%23s1pchristmas%23s1pcrystal%23s1pdarkness%23s1poxygen%23s1goxygen_gif%23s1pplain%23s1ppumpkin%23s1psoft%23s1pstarrating%23s1pstarscape%23t1pclassical%23t1pstarrating%23t1gstarrating_gif%23lsgflower%23lsgradar&#038;o=off&#038;ver=1.9.22' type='text/css' media='all' /><script type='text/javascript'>
+/* <![CDATA[ */
+var CrayonSyntaxSettings = {"version":"2.2.0","is_admin":"0","ajaxurl":"http:\/\/leetcode.com\/wp-admin\/admin-ajax.php","prefix":"crayon-","setting":"crayon-setting","selected":"crayon-setting-selected","changed":"crayon-setting-changed","special":"crayon-setting-special","orig_value":"data-orig-value","debug":""};
+var CrayonSyntaxStrings = {"copy":"Press %s to Copy, %s to Paste","minimize":"Click To Expand Code"};
+/* ]]> */
+</script><script type='text/javascript'>
+/* <![CDATA[ */
+var BP_DTheme = {"my_favs":"My Likes","accepted":"Accepted","rejected":"Rejected","show_all_comments":"Show all comments for this thread","show_all":"Show all","comments":"comments","close":"Close","view":"View","mark_as_fav":"Like","remove_fav":"Unlike","add_photo":"Add Photo","cancel":"Cancel","failed":"Failed","person":"person","people":"people","like":"like","likes":"likes","this_1":"this"};
+/* ]]> */
+</script><link
+rel='next' title='C code to remove spaces from a string' href='http://leetcode.com/2010/02/c-code-to-remove-spaces-from-string.html' /><link
+rel='canonical' href='http://leetcode.com/2010/02/interview-tips-for-programmers.html' /><link
+rel='shortlink' href='http://leetcode.com/?p=4' /><script type="text/javascript">var ajaxurl = 'http://leetcode.com/wp-admin/admin-ajax.php';</script><style type='text/css'>#sidebar span.collapsing.archives {
+        border:0;
+        padding:0; 
+        margin:0; 
+        cursor:pointer;
+} 
+
+#sidebar span.monthCount, span.yearCount {text-decoration:none; color:#333}
+#sidebar li.collapsing.archives a.self {font-weight:bold}
+#sidebar ul.collapsing.archives.list ul.collapsing.archives.list:before {content:\'\';} 
+#sidebar ul.collapsing.archives.list li.collapsing.archives:before {content:\'\';} 
+#sidebar ul.collapsing.archives.list li.collapsing.archives {list-style-type:none}
+#sidebar ul.collapsing.archives.list li {
+       margin:0 0 0 .8em;
+       text-indent:-1em}
+#sidebar ul.collapsing.archives.list li.collapsing.archives.item:before {content: \'\\00BB \\00A0\' !important;} 
+#sidebar ul.collapsing.archives.list li.collapsing.archives .sym {
+   font-size:1.2em;
+   font-family:Monaco, \'Andale Mono\', \'FreeMono\', \'Courier new\', \'Courier\', monospace;
+   cursor:pointer;
+    padding-right:15px;}
+#sidebar ul.collapsing.archives.list span.collapsing.archives.collapse .sym {
+    background-image: url(/wp-content/plugins/collapsing-archives/img/list-collapse.gif);
+}
+#sidebar ul.collapsing.archives.list span.collapsing.archives.expand .sym {
+    background-image: url(/wp-content/plugins/collapsing-archives/img/list-expand.gif);
+}</style><script type="text/javascript">
+//<![CDATA[
+var gdsr_cnst_nonce = "81e35b8e4c";
+var gdsr_cnst_ajax = "http://leetcode.com/wp-content/plugins/gd-star-rating/ajax.php";
+var gdsr_cnst_button = 1;
+var gdsr_cnst_cache = 0;
+// ]]>
+</script><!--[if IE]><style type="text/css">.ratemulti .starsbar .gdcurrent { -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)"; filter: alpha(opacity=70); }</style><![endif]--> <script type="text/javascript">
+    /* <![CDATA[ */				
+	jQuery.post('http://leetcode.com/wp-admin/admin-ajax.php', {action: 'wpp_update', token: 'd8025b5d0c', id: 4}, function(data){/*alert(data);*/});
+    /* ]]> */
+</script><style type="text/css" media="print">#wpadminbar { display:none; }</style><style type="text/css" media="screen">
+	html { margin-top: 28px !important; }
+	* html body { margin-top: 28px !important; }
+</style><script type="text/javascript"> jQuery(document).ready( function() { jQuery("a.confirm").click( function() { if ( confirm( 'Are you sure?' ) ) return true; else return false; }); });</script></head><body
+class="single single-post postid-4 single-format-standard admin-bar no-customize-support no-js buddyboss-active-pics buddyboss-active-wall admin-bar" id="bp-default"> <!--[if lte IE 6]><script src="http://leetcode.com/wp-content/themes/buddyboss/_inc/js/ie6/warning.js"></script><script>window.onload=function(){e("http://leetcode.com/wp-content/themes/buddyboss-child/_inc/js/ie6/")}</script><![endif]--><script type="text/javascript">//<![CDATA[
+(function(){var c=document.body.className;c=c.replace(/no-js/,'js');document.body.className=c;})();
+//]]></script><div
+id="top-hdr-bg"></div><div
+class="menu-bg"></div><div
+id="wrapper"><div
+id="header"><div
+class="padder"><div
+id="logo"> <a
+href="http://leetcode.com" title="Home"><img
+src="http://leetcode.com/wp-content/uploads/2012/12/leetcodelogo.png"/></a></div><div
+class="menu-bg"></div><ul
+class="sf-menu"><li
+class="page_item page-item-2"><a
+href="http://leetcode.com/about">About</a></li><li
+class="page_item page-item-908"><a
+href="http://leetcode.com/activity">Activity</a></li><li
+class="page_item page-item-1466"><a
+href="http://leetcode.com/discuss">Discuss</a></li><li
+class="page_item page-item-1658"><a
+href="http://leetcode.com/donate">Donate</a></li><li
+class="page_item page-item-907"><a
+href="http://leetcode.com/members">Members</a></li><li
+class="page_item page-item-370"><a
+href="http://leetcode.com/onlinejudge">Online Judge</a></li></ul></div></div><div
+id="container"><div
+id="content" class="two_column"><div
+class="padder"><div
+class="page" id="blog-single" role="main"><div
+id="post-4" class="post-4 post type-post status-publish format-standard hentry category-uncategorized"><div
+class="author-box"> <img
+src="http://leetcode.com/wp-content/uploads/avatars/8268/2ffa5b26dd039dec008aa06ddae07ec0-bpthumb.jpg" alt="Avatar of 1337c0d3r" class="avatar user-8268-avatar" width="50" height="50" /><p>by <a
+rel="author" href="http://leetcode.com/members/admin/" title="1337c0d3r">1337c0d3r</a></p></div><div
+class="post-content"><h2 class="posttitle">Interview tips for programmers</h2><p
+class="date"> February 13, 2010 <span>in <a
+href="http://leetcode.com/category/uncategorized" title="View all posts in Uncategorized" rel="category tag">Uncategorized</a></span> <span
+class="post-utility alignright"></span></p><div
+class="entry"><p>If you are majoring in Computer Science, chances are you&#8217;ll be working with jobs that require some degree of programming. When you&#8217;re looking for a job in the market, you&#8217;ll be having a lot of interviews. Interviewer loves to challenge you by asking some technical interview questions. <span
+id="more-4"></span>There are 3 types of technical questions in general:</p><p>1) Algorithms/Data structure<br
+/>2) Programming language-specific / General CS knowledge<br
+/>3) Brain teaser</p><p>I&#8217;ll go over with more details on each of them:<br
+/>1) Algorithms/Data structure<br
+/>You should understand these topics deeply from a typical data structure course: Array, Linked-list, Binary tree, Hash table&#8230; You should be able to tell when to use an array vs. linked-list, implementation details of linked list such as reversing a list&#8230;</p><p>Interviewer typically test your problem-solving ability by asking algorithmic questions. Some examples are:<br
+/>- Reversing the words in a sentence.<br
+/>- Reversing the letters in a word. (Try both iteration and recursion solutions)<br
+/>- How to find duplicate data in a list.<br
+/>- Generating permutations of n digits. (hint: recursion)<br
+/>- Find the median of combination of two sorted arrays of numbers. (hint: divide and conquer)<br
+/>- How to spell-check and correct a word (hint: edit distance)</p><p>2) Programming language-specific / General CS knowledge<br
+/>If you&#8217;re applying a C++ programmer position, be prepared for lots of C++ questions. Same with other languages. If the position you applying does not have a language-specific role, you may be asked general CS knowledge, such as difference between allocating on a stack and heap, &#8230;</p><p>Some C++ related questions I encounter often:<br
+/>- What are virtual functions? How is it implemented? What are the trade-offs using virtual functions?<br
+/>- What is a virtual destructor? When do you need them? What if you don&#8217;t implement a destructor as virtual?<br
+/>- What is copy constructor and when is it being called?<br
+/>- What&#8217;s the difference between malloc and new?</p><p>3) Brain teaser<br
+/>Some interviewers like to ask a brain teaser question to end the interview <img
+src='http://leetcode.com/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> You&#8217;ll know it when they ask: Do you like puzzles? Prepare for some creative thinking <img
+src='http://leetcode.com/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /></p><p>Some sample questions:<br
+/>- Two eggs problem:<br
+/>You have two identical eggs and you are given access to a 100 story building. You would like to know the highest floor for the egg not to break when dropped. The problem is the egg might break on the 1st floor, or even the 100th floor, you just don&#8217;t know. Find the maximum number of trials you need to conduct in order to find the answer.</p><p>- Reverse the bits in one byte data as fast as possible.</p><p>- You have 5 identical jars. 4 of the jars contain balls with identical size weighing 10g each, while 1 of the jar contains balls weighing 9g each. You are given a digital scale, find out the 1 jar that has the 9g balls with only 1 weighing.</p><div
+style="display: none">VN:F [1.9.22_1171]</div><div
+class="ratingblock "><div
+class="ratingheader "></div><div
+class="ratingstars "><div
+id="article_rater_4" class="ratepost gdsr-oxygen gdsr-size-24"><div
+class="starsbar gdsr-size-24"><div
+class="gdouter gdheight"><div
+id="gdr_vote_a4" style="width: 107.07692307692px;" class="gdinner gdheight"></div><div
+id="gdr_stars_a4" class="gdsr_rating_as"><a
+id="gdsrX4X5X0XaXarticle_rater_4Xarticle_loader_4X10X24" title="5 / 5" class="s5" rel="nofollow"></a><a
+id="gdsrX4X4X0XaXarticle_rater_4Xarticle_loader_4X10X24" title="4 / 5" class="s4" rel="nofollow"></a><a
+id="gdsrX4X3X0XaXarticle_rater_4Xarticle_loader_4X10X24" title="3 / 5" class="s3" rel="nofollow"></a><a
+id="gdsrX4X2X0XaXarticle_rater_4Xarticle_loader_4X10X24" title="2 / 5" class="s2" rel="nofollow"></a><a
+id="gdsrX4X1X0XaXarticle_rater_4Xarticle_loader_4X10X24" title="1 / 5" class="s1" rel="nofollow"></a></div></div></div></div><div
+id="article_loader_4" style="display: none; width: 120px " class="ratingloaderarticle"><div
+class="loader radar " style="height: 24px"><div
+class="loaderinner" style="padding-top: 2px">please wait...</div></div></div></div><div
+class="ratingtext "><div
+id="gdr_text_a4">Rating: 4.5/<strong>5</strong> (13 votes cast)</div></div></div><span
+class="hreview-aggregate"><span
+class="item"><span
+class="fn">Interview tips for programmers</span></span>, <span
+class="rating"><span
+class="average">4.5</span> out of <span
+class="best">5</span> based on <span
+class="votes">13</span> ratings <span
+class="summary"></span></span></span></div><p
+class="postmetadata">&nbsp;</p><div
+class="alignleft"></div><div
+class="alignright"><a
+href="http://leetcode.com/2010/02/c-code-to-remove-spaces-from-string.html" rel="next">C code to remove spaces from a string <span
+class="meta-nav">&rarr;</span></a></div></div></div><div
+id="comments"><h3> 9 responses to <em>Interview tips for programmers</em></h3><ol
+class="commentlist"><li
+class="comment even thread-even depth-1" id="comment-58"><div
+class="comment-avatar-box"><div
+class="avb"> <a
+href="" rel="nofollow"> <img
+alt='' src='http://0.gravatar.com/avatar/?d=identicon&amp;s=50' class='avatar avatar-50 photo avatar-default' height='50' width='50' /> </a></div></div><div
+class="comment-content"><div
+class="comment-meta"><p> <a
+href="" rel="nofollow">TBird</a> said on <a
+href="http://leetcode.com/2010/02/interview-tips-for-programmers.html#comment-58"><span
+class="time-since">September 30, 2010</span></a></p></div><div
+class="comment-entry"><p>what is the solution of the very last question(5 jars)? thanks &#8211;mitbbs</p><div
+style="display: none">VA:F [1.9.22_1171]</div><div
+class="thumblock "><div
+class="ratingtext "><div
+id="gdsr_thumb_text_58_c" class="gdt-size-20 gdthumbtext"> <strong
+title="0 up, 0 down">0</strong></div></div><span
+title="Vote Up (This comment is useful)"><div
+id="gdsr_thumb_58_c_up" class="gdt-size-20 gdthumb gdup"><a
+id="gdsrX58XupXcX46X20XY" class="gdt-starrating" rel="nofollow"></a></div><div
+id="gdsr_thumb_58_c_loader_up" style="display: none; width: 20px " class="ratingloader loadup"><div
+class="loader thumb radar" style="width: 20px; height: 20px;"></div></div></span><span
+title="Vote Down (This comment is not useful)"><div
+id="gdsr_thumb_58_c_dw" class="gdt-size-20 gdthumb gddw"><a
+id="gdsrX58XdwXcX46X20XY" class="gdt-starrating" rel="nofollow"></a></div><div
+id="gdsr_thumb_58_c_loader_dw" style="display: none; width: 20px " class="ratingloader loaddw"><div
+class="loader thumb radar" style="width: 20px; height: 20px;"></div></div></span><div
+class="raterclear"></div></div></div><div
+class="comment-options"> <a
+class='comment-reply-link' href='/2010/02/interview-tips-for-programmers.html?replytocom=58#respond' onclick='return addComment.moveForm("comment-58", "58", "respond", "4")'>Reply</a></div></div><ul
+class='children'><li
+class="comment odd alt depth-2" id="comment-24383"><div
+class="comment-avatar-box"><div
+class="avb"> <a
+href="" rel="nofollow"> <img
+alt='' src='http://0.gravatar.com/avatar/87493546fc07fcfe7e797175e570977a?s=25&amp;d=identicon&amp;r=G' class='avatar avatar-25 photo' height='25' width='25' /> </a></div></div><div
+class="comment-content"><div
+class="comment-meta"><p> <a
+href="" rel="nofollow">Arun</a> said on <a
+href="http://leetcode.com/2010/02/interview-tips-for-programmers.html#comment-24383"><span
+class="time-since">August 25, 2012</span></a></p></div><div
+class="comment-entry"><p>Pick one ball from jar1, 2 balls from jar2 and so on till 5balls from jar5,weighing them.<br
+/> Total no of balls=15. If there is no defective balls total weight should be 150gm but since 1 jar is faulty, so total weight is less than 150. Let us assume the weight is 146gm(u can choose any one from 145 to 149). Since total weight is 4gm less than actual weight then the jar4 is the faulty jar bcoz we pick 4 balls from jar4 having 1 gm less than the original.</p><div
+style="display: none">VA:F [1.9.22_1171]</div><div
+class="thumblock "><div
+class="ratingtext "><div
+id="gdsr_thumb_text_24383_c" class="gdt-size-20 gdthumbtext"> <strong
+title="7 up, 0 down">+7</strong></div></div><span
+title="Vote Up (This comment is useful)"><div
+id="gdsr_thumb_24383_c_up" class="gdt-size-20 gdthumb gdup"><a
+id="gdsrX24383XupXcX46X20XY" class="gdt-starrating" rel="nofollow"></a></div><div
+id="gdsr_thumb_24383_c_loader_up" style="display: none; width: 20px " class="ratingloader loadup"><div
+class="loader thumb radar" style="width: 20px; height: 20px;"></div></div></span><span
+title="Vote Down (This comment is not useful)"><div
+id="gdsr_thumb_24383_c_dw" class="gdt-size-20 gdthumb gddw"><a
+id="gdsrX24383XdwXcX46X20XY" class="gdt-starrating" rel="nofollow"></a></div><div
+id="gdsr_thumb_24383_c_loader_dw" style="display: none; width: 20px " class="ratingloader loaddw"><div
+class="loader thumb radar" style="width: 20px; height: 20px;"></div></div></span><div
+class="raterclear"></div></div></div><div
+class="comment-options"> <a
+class='comment-reply-link' href='/2010/02/interview-tips-for-programmers.html?replytocom=24383#respond' onclick='return addComment.moveForm("comment-24383", "24383", "respond", "4")'>Reply</a></div></div></li></ul></li><li
+class="comment even thread-odd thread-alt depth-1" id="comment-59"><div
+class="comment-avatar-box"><div
+class="avb"> <a
+href="" rel="nofollow"> <img
+alt='' src='http://0.gravatar.com/avatar/?d=identicon&amp;s=50' class='avatar avatar-50 photo avatar-default' height='50' width='50' /> </a></div></div><div
+class="comment-content"><div
+class="comment-meta"><p> <a
+href="" rel="nofollow">1337c0d3r</a> said on <a
+href="http://leetcode.com/2010/02/interview-tips-for-programmers.html#comment-59"><span
+class="time-since">September 30, 2010</span></a></p></div><div
+class="comment-entry"><p>I&#39;ll give you hints instead of spoiling the fun:</p><p>Try to get different number of balls from each jar and put it on the digital scale. Let me know if you are still stuck.</p><div
+style="display: none">VA:F [1.9.22_1171]</div><div
+class="thumblock "><div
+class="ratingtext "><div
+id="gdsr_thumb_text_59_c" class="gdt-size-20 gdthumbtext"> <strong
+title="0 up, 0 down">0</strong></div></div><span
+title="Vote Up (This comment is useful)"><div
+id="gdsr_thumb_59_c_up" class="gdt-size-20 gdthumb gdup"><a
+id="gdsrX59XupXcX46X20XY" class="gdt-starrating" rel="nofollow"></a></div><div
+id="gdsr_thumb_59_c_loader_up" style="display: none; width: 20px " class="ratingloader loadup"><div
+class="loader thumb radar" style="width: 20px; height: 20px;"></div></div></span><span
+title="Vote Down (This comment is not useful)"><div
+id="gdsr_thumb_59_c_dw" class="gdt-size-20 gdthumb gddw"><a
+id="gdsrX59XdwXcX46X20XY" class="gdt-starrating" rel="nofollow"></a></div><div
+id="gdsr_thumb_59_c_loader_dw" style="display: none; width: 20px " class="ratingloader loaddw"><div
+class="loader thumb radar" style="width: 20px; height: 20px;"></div></div></span><div
+class="raterclear"></div></div></div><div
+class="comment-options"> <a
+class='comment-reply-link' href='/2010/02/interview-tips-for-programmers.html?replytocom=59#respond' onclick='return addComment.moveForm("comment-59", "59", "respond", "4")'>Reply</a></div></div></li><li
+class="comment odd alt thread-even depth-1" id="comment-577"><div
+class="comment-avatar-box"><div
+class="avb"> <a
+href="" rel="nofollow"> <img
+alt='' src='http://0.gravatar.com/avatar/ebc181d9ee7b496e2df217731f0192ba?s=50&amp;d=identicon&amp;r=G' class='avatar avatar-50 photo' height='50' width='50' /> </a></div></div><div
+class="comment-content"><div
+class="comment-meta"><p> <a
+href="" rel="nofollow">airfang</a> said on <a
+href="http://leetcode.com/2010/02/interview-tips-for-programmers.html#comment-577"><span
+class="time-since">March 8, 2011</span></a></p></div><div
+class="comment-entry"><p>The first and the last brain-teaser questions appeared in The Algorithm Design Manual</p><div
+style="display: none">VA:F [1.9.22_1171]</div><div
+class="thumblock "><div
+class="ratingtext "><div
+id="gdsr_thumb_text_577_c" class="gdt-size-20 gdthumbtext"> <strong
+title="0 up, 0 down">0</strong></div></div><span
+title="Vote Up (This comment is useful)"><div
+id="gdsr_thumb_577_c_up" class="gdt-size-20 gdthumb gdup"><a
+id="gdsrX577XupXcX46X20XY" class="gdt-starrating" rel="nofollow"></a></div><div
+id="gdsr_thumb_577_c_loader_up" style="display: none; width: 20px " class="ratingloader loadup"><div
+class="loader thumb radar" style="width: 20px; height: 20px;"></div></div></span><span
+title="Vote Down (This comment is not useful)"><div
+id="gdsr_thumb_577_c_dw" class="gdt-size-20 gdthumb gddw"><a
+id="gdsrX577XdwXcX46X20XY" class="gdt-starrating" rel="nofollow"></a></div><div
+id="gdsr_thumb_577_c_loader_dw" style="display: none; width: 20px " class="ratingloader loaddw"><div
+class="loader thumb radar" style="width: 20px; height: 20px;"></div></div></span><div
+class="raterclear"></div></div></div><div
+class="comment-options"> <a
+class='comment-reply-link' href='/2010/02/interview-tips-for-programmers.html?replytocom=577#respond' onclick='return addComment.moveForm("comment-577", "577", "respond", "4")'>Reply</a></div></div><ul
+class='children'><li
+class="comment even depth-2" id="comment-1996"><div
+class="comment-avatar-box"><div
+class="avb"> <a
+href="" rel="nofollow"> <img
+alt='' src='http://0.gravatar.com/avatar/afc06afe468ef4d13460d3b2542650bb?s=25&amp;d=identicon&amp;r=G' class='avatar avatar-25 photo' height='25' width='25' /> </a></div></div><div
+class="comment-content"><div
+class="comment-meta"><p> <a
+href="" rel="nofollow">luffy</a> said on <a
+href="http://leetcode.com/2010/02/interview-tips-for-programmers.html#comment-1996"><span
+class="time-since">August 10, 2011</span></a></p></div><div
+class="comment-entry"><p>I am still stuck with the last brain-teaser</p><div
+style="display: none">VA:F [1.9.22_1171]</div><div
+class="thumblock "><div
+class="ratingtext "><div
+id="gdsr_thumb_text_1996_c" class="gdt-size-20 gdthumbtext"> <strong
+title="0 up, 0 down">0</strong></div></div><span
+title="Vote Up (This comment is useful)"><div
+id="gdsr_thumb_1996_c_up" class="gdt-size-20 gdthumb gdup"><a
+id="gdsrX1996XupXcX46X20XY" class="gdt-starrating" rel="nofollow"></a></div><div
+id="gdsr_thumb_1996_c_loader_up" style="display: none; width: 20px " class="ratingloader loadup"><div
+class="loader thumb radar" style="width: 20px; height: 20px;"></div></div></span><span
+title="Vote Down (This comment is not useful)"><div
+id="gdsr_thumb_1996_c_dw" class="gdt-size-20 gdthumb gddw"><a
+id="gdsrX1996XdwXcX46X20XY" class="gdt-starrating" rel="nofollow"></a></div><div
+id="gdsr_thumb_1996_c_loader_dw" style="display: none; width: 20px " class="ratingloader loaddw"><div
+class="loader thumb radar" style="width: 20px; height: 20px;"></div></div></span><div
+class="raterclear"></div></div></div><div
+class="comment-options"> <a
+class='comment-reply-link' href='/2010/02/interview-tips-for-programmers.html?replytocom=1996#respond' onclick='return addComment.moveForm("comment-1996", "1996", "respond", "4")'>Reply</a></div></div><ul
+class='children'><li
+class="comment odd alt depth-3" id="comment-3174"><div
+class="comment-avatar-box"><div
+class="avb"> <a
+href="" rel="nofollow"> <img
+alt='' src='http://1.gravatar.com/avatar/14156ee8e8464385d1dad704e9138a94?s=25&amp;d=identicon&amp;r=G' class='avatar avatar-25 photo' height='25' width='25' /> </a></div></div><div
+class="comment-content"><div
+class="comment-meta"><p> <a
+href="" rel="nofollow">v33n</a> said on <a
+href="http://leetcode.com/2010/02/interview-tips-for-programmers.html#comment-3174"><span
+class="time-since">October 1, 2011</span></a></p></div><div
+class="comment-entry"><p>Last puzzle:</p><p>Assuming there are more than one balls in each jar. Since digital scale will give exact weight, so if we put one ball from each jar, the digital scale would show 49. Similarly, if we put two balls from each jar on the scale and then weigh, it would show 98. This means we can use combinations of balls and since we know the expected weight, we can find out which jar has lighter balls. How?<br
+/> Pick 1 ball from 1st jar, 2 balls from 2nd and so on. Put all of these on scale, let the reading be X. Now suppose each ball in each jar weighed 10g. In that case, the scale would have read (1+2+3+4+5) * 10 = 150. According to the problem, one jar has balls weighing 9g, i.e. 1g lesser than those in rest of the jars. That means the reading X would differ from 150 exactly by the number of balls weighing 9g, but since we picked different balls from each jar, we know exactly which jar has these balls. Answer: 150 &#8211; X</p><div
+style="display: none">VA:F [1.9.22_1171]</div><div
+class="thumblock "><div
+class="ratingtext "><div
+id="gdsr_thumb_text_3174_c" class="gdt-size-20 gdthumbtext"> <strong
+title="3 up, 0 down">+3</strong></div></div><span
+title="Vote Up (This comment is useful)"><div
+id="gdsr_thumb_3174_c_up" class="gdt-size-20 gdthumb gdup"><a
+id="gdsrX3174XupXcX46X20XY" class="gdt-starrating" rel="nofollow"></a></div><div
+id="gdsr_thumb_3174_c_loader_up" style="display: none; width: 20px " class="ratingloader loadup"><div
+class="loader thumb radar" style="width: 20px; height: 20px;"></div></div></span><span
+title="Vote Down (This comment is not useful)"><div
+id="gdsr_thumb_3174_c_dw" class="gdt-size-20 gdthumb gddw"><a
+id="gdsrX3174XdwXcX46X20XY" class="gdt-starrating" rel="nofollow"></a></div><div
+id="gdsr_thumb_3174_c_loader_dw" style="display: none; width: 20px " class="ratingloader loaddw"><div
+class="loader thumb radar" style="width: 20px; height: 20px;"></div></div></span><div
+class="raterclear"></div></div></div><div
+class="comment-options"> <a
+class='comment-reply-link' href='/2010/02/interview-tips-for-programmers.html?replytocom=3174#respond' onclick='return addComment.moveForm("comment-3174", "3174", "respond", "4")'>Reply</a></div></div><ul
+class='children'><li
+class="comment even depth-4" id="comment-3234"><div
+class="comment-avatar-box"><div
+class="avb"> <a
+href="" rel="nofollow"> <img
+alt='' src='http://1.gravatar.com/avatar/d89d81f673dac06b16cade5b4bf19954?s=25&amp;d=identicon&amp;r=G' class='avatar avatar-25 photo' height='25' width='25' /> </a></div></div><div
+class="comment-content"><div
+class="comment-meta"><p> <a
+href="" rel="nofollow">Mango</a> said on <a
+href="http://leetcode.com/2010/02/interview-tips-for-programmers.html#comment-3234"><span
+class="time-since">October 3, 2011</span></a></p></div><div
+class="comment-entry"><p>Thanks v33n</p><div
+style="display: none">VA:F [1.9.22_1171]</div><div
+class="thumblock "><div
+class="ratingtext "><div
+id="gdsr_thumb_text_3234_c" class="gdt-size-20 gdthumbtext"> <strong
+title="0 up, 0 down">0</strong></div></div><span
+title="Vote Up (This comment is useful)"><div
+id="gdsr_thumb_3234_c_up" class="gdt-size-20 gdthumb gdup"><a
+id="gdsrX3234XupXcX46X20XY" class="gdt-starrating" rel="nofollow"></a></div><div
+id="gdsr_thumb_3234_c_loader_up" style="display: none; width: 20px " class="ratingloader loadup"><div
+class="loader thumb radar" style="width: 20px; height: 20px;"></div></div></span><span
+title="Vote Down (This comment is not useful)"><div
+id="gdsr_thumb_3234_c_dw" class="gdt-size-20 gdthumb gddw"><a
+id="gdsrX3234XdwXcX46X20XY" class="gdt-starrating" rel="nofollow"></a></div><div
+id="gdsr_thumb_3234_c_loader_dw" style="display: none; width: 20px " class="ratingloader loaddw"><div
+class="loader thumb radar" style="width: 20px; height: 20px;"></div></div></span><div
+class="raterclear"></div></div></div><div
+class="comment-options"> <a
+class='comment-reply-link' href='/2010/02/interview-tips-for-programmers.html?replytocom=3234#respond' onclick='return addComment.moveForm("comment-3234", "3234", "respond", "4")'>Reply</a></div></div></li></ul></li></ul></li></ul></li><li
+class="comment byuser comment-author-qiuye0827 odd alt thread-odd thread-alt depth-1" id="comment-15102"><div
+class="comment-avatar-box"><div
+class="avb"> <a
+href="http://leetcode.com/members/qiuye0827/" rel="nofollow"> <img
+src="http://www.gravatar.com/avatar/0364a16b8922d601a4b413d107ab28af?d=identicon&amp;s=50&amp;r=G" alt="Avatar Image" class="avatar user-869-avatar" width="50" height="50" /> </a></div></div><div
+class="comment-content"><div
+class="comment-meta"><p> <a
+href="http://leetcode.com/members/qiuye0827/" rel="nofollow">qiuye</a> said on <a
+href="http://leetcode.com/2010/02/interview-tips-for-programmers.html#comment-15102"><span
+class="time-since">February 24, 2012</span></a></p></div><div
+class="comment-entry"><p>Thanks</p><div
+style="display: none">VN:F [1.9.22_1171]</div><div
+class="thumblock "><div
+class="ratingtext "><div
+id="gdsr_thumb_text_15102_c" class="gdt-size-20 gdthumbtext"> <strong
+title="0 up, 0 down">0</strong></div></div><span
+title="Vote Up (This comment is useful)"><div
+id="gdsr_thumb_15102_c_up" class="gdt-size-20 gdthumb gdup"><a
+id="gdsrX15102XupXcX46X20XY" class="gdt-starrating" rel="nofollow"></a></div><div
+id="gdsr_thumb_15102_c_loader_up" style="display: none; width: 20px " class="ratingloader loadup"><div
+class="loader thumb radar" style="width: 20px; height: 20px;"></div></div></span><span
+title="Vote Down (This comment is not useful)"><div
+id="gdsr_thumb_15102_c_dw" class="gdt-size-20 gdthumb gddw"><a
+id="gdsrX15102XdwXcX46X20XY" class="gdt-starrating" rel="nofollow"></a></div><div
+id="gdsr_thumb_15102_c_loader_dw" style="display: none; width: 20px " class="ratingloader loaddw"><div
+class="loader thumb radar" style="width: 20px; height: 20px;"></div></div></span><div
+class="raterclear"></div></div></div><div
+class="comment-options"> <a
+class='comment-reply-link' href='/2010/02/interview-tips-for-programmers.html?replytocom=15102#respond' onclick='return addComment.moveForm("comment-15102", "15102", "respond", "4")'>Reply</a></div></div></li><li
+class="comment byuser comment-author-aephicesare even thread-even depth-1" id="comment-65118"><div
+class="comment-avatar-box"><div
+class="avb"> <a
+href="http://leetcode.com/members/aephicesare/" rel="nofollow"> <img
+src="http://www.gravatar.com/avatar/f23cb83dd76fb6549226131645cc5b52?d=identicon&amp;s=50&amp;r=G" alt="Avatar Image" class="avatar user-15715-avatar" width="50" height="50" /> </a></div></div><div
+class="comment-content"><div
+class="comment-meta"><p> <a
+href="http://leetcode.com/members/aephicesare/" rel="nofollow">Aephi</a> said on <a
+href="http://leetcode.com/2010/02/interview-tips-for-programmers.html#comment-65118"><span
+class="time-since">June 27, 2013</span></a></p></div><div
+class="comment-entry"><p>good tips</p><div
+style="display: none">VN:F [1.9.22_1171]</div><div
+class="thumblock "><div
+class="ratingtext "><div
+id="gdsr_thumb_text_65118_c" class="gdt-size-20 gdthumbtext"> <strong
+title="0 up, 0 down">0</strong></div></div><span
+title="Vote Up (This comment is useful)"><div
+id="gdsr_thumb_65118_c_up" class="gdt-size-20 gdthumb gdup"><a
+id="gdsrX65118XupXcX46X20XY" class="gdt-starrating" rel="nofollow"></a></div><div
+id="gdsr_thumb_65118_c_loader_up" style="display: none; width: 20px " class="ratingloader loadup"><div
+class="loader thumb radar" style="width: 20px; height: 20px;"></div></div></span><span
+title="Vote Down (This comment is not useful)"><div
+id="gdsr_thumb_65118_c_dw" class="gdt-size-20 gdthumb gddw"><a
+id="gdsrX65118XdwXcX46X20XY" class="gdt-starrating" rel="nofollow"></a></div><div
+id="gdsr_thumb_65118_c_loader_dw" style="display: none; width: 20px " class="ratingloader loaddw"><div
+class="loader thumb radar" style="width: 20px; height: 20px;"></div></div></span><div
+class="raterclear"></div></div></div><div
+class="comment-options"> <a
+class='comment-reply-link' href='/2010/02/interview-tips-for-programmers.html?replytocom=65118#respond' onclick='return addComment.moveForm("comment-65118", "65118", "respond", "4")'>Reply</a></div></div></li></ol></div><div
+id="respond"><h3 id="reply-title">Leave a reply <small><a
+rel="nofollow" id="cancel-comment-reply-link" href="/2010/02/interview-tips-for-programmers.html#respond" style="display:none;">Cancel reply</a></small></h3><form
+action="http://leetcode.com/wp-comments-post.php" method="post" id="commentform"><div
+class="comment-avatar-box"><div
+class="avb"> <img
+alt='' src='http://0.gravatar.com/avatar/?d=identicon&amp;s=50' class='avatar avatar-50 photo avatar-default' height='50' width='50' /></div></div><div
+class="comment-content standard-form"><p
+class="comment-notes">Your email address will not be published. Required fields are marked <span
+class="required">*</span></p><p
+class="comment-form-author"><label
+for="author">Name<span
+class="required"> *</span></label> <input
+id="author" name="author" type="text" value="" size="30" aria-required='true' /></p><p
+class="comment-form-email"><label
+for="email">Email<span
+class="required"> *</span></label> <input
+id="email" name="email" type="text" value="" size="30" aria-required='true' /></p><p
+class="comment-form-url"><label
+for="url">Website</label><input
+id="url" name="url" type="text" value="" size="30" /></p><p
+class="form-textarea"><textarea name="comment" id="comment" cols="60" rows="10" aria-required="true"></textarea></p><p
+class="form-allowed-tags">You may use the <code>&lt;code&gt;</code> tag to embed your code.</p><p
+class="form-submit"> <input
+name="submit" type="submit" id="submit" value="Post Comment" /> <input
+type='hidden' name='comment_post_ID' value='4' id='comment_post_ID' /> <input
+type='hidden' name='comment_parent' id='comment_parent' value='0' /></p><p
+style="display: none;"><input
+type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="ea321d7b8c" /></p></div></form></div></div></div></div><div
+id="post-dir-search" class="dir-search"><form
+role="search" method="get" id="searchform" action="http://leetcode.com/"> <input
+type="text" value="" name="s" id="s" /> <input
+type="submit" id="searchsubmit" value="Search" /></form></div><div
+id="sidebar"><div
+class="padder"></div></div></div><div
+id="push"></div></div><div
+id="footer"><div
+id="colophon"><div
+class="footer-widget"></div><div
+class="footer-widget"></div><div
+class="footer-widget"></div><div
+class="footer-widget last"></div><div
+class="clear"></div><div
+id="footer-links"><ul
+class="footer-menu"><li
+class="page_item page-item-2"><a
+href="http://leetcode.com/about">About</a></li><li
+class="page_item page-item-908"><a
+href="http://leetcode.com/activity">Activity</a></li><li
+class="page_item page-item-1466"><a
+href="http://leetcode.com/discuss">Discuss</a></li><li
+class="page_item page-item-1658"><a
+href="http://leetcode.com/donate">Donate</a></li><li
+class="page_item page-item-907"><a
+href="http://leetcode.com/members">Members</a></li><li
+class="page_item page-item-370"><a
+href="http://leetcode.com/onlinejudge">Online Judge</a></li></ul></div><div
+id="credits"><p>Copyright &copy; 2014 LeetCode &nbsp;&middot;&nbsp; <a
+href="http://leetcode.com/wp-login.php">Log in</a></p></div></div></div><div
+id="wpadminbar" class="nojq nojs" role="navigation"> <a
+class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a><div
+class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Top navigation toolbar." tabindex="0"><ul
+id="wp-admin-bar-root-default" class="ab-top-menu"><li
+id="wp-admin-bar-bp-login"><a
+class="ab-item"  href="http://leetcode.com/wp-login.php">Log in</a></li><li
+id="wp-admin-bar-bp-register"><a
+class="ab-item"  href="http://leetcode.com/register/">Register</a></li><li
+id="wp-admin-bar-my-account"><div
+class="ab-item ab-empty-item" ></div></li></ul></div> <a
+class="screen-reader-shortcut" href="http://leetcode.com/wp-login.php?action=logout&#038;_wpnonce=abd7e18b66">Log Out</a></div><div
+class="buddyboss_log"></div> <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-6849839-3']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script><style type="text/css">
+    .defaultCommentText { color: #a1a1a1; font-style: italic; }
+  </style><script type="text/javascript">
+    jQuery("textarea#comment, textarea#reply_text").focus(function(srcc) {
+      if (jQuery(this).val() == jQuery(this)[0].title) {
+        jQuery(this).val("");
+        jQuery(this).removeClass("defaultCommentText");
+      }
+    });
+    jQuery("textarea#comment, textarea#reply_text").blur(function() {
+      if (jQuery(this).val() == "") {
+        jQuery(this).val(jQuery(this)[0].title);
+        jQuery(this).addClass("defaultCommentText");
+      }
+    });
+    jQuery("textarea#comment, textarea#reply_text").attr('title', 'To embed your code, please use <code>your code here</code>.');
+    jQuery("textarea#comment, textarea#reply_text").blur();
+  </script></body></html>
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Minified using disk: basic
+Page Caching using disk: enhanced
+
+ Served from: leetcode.com @ 2014-01-31 22:44:55 by W3 Total Cache -->
